@@ -2,41 +2,24 @@ import heroImage from "../assets/images/hero-image.jpg";
 
 const HeroBanner = () => {
   return (
-    <section className="lg:px-[30px] mt-6 z-0">
+    <section className="lg:px-[30px] mt-6 lg:mt-[140px] z-0">
       <div className="relative">
 
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-10">
-        {/* First Gradient */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 rounded-primary"
             style={{
-              background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3))',
+              background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), linear-gradient(rgba(0, 0, 0, 0), rgba(30, 34, 170, 0.5)),linear-gradient(rgba(30, 34, 170, 0), rgba(30, 34, 170, 0.2))',
             }}
-          ></div>
-
-          {/* Second Gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(30, 34, 170, 0.5))',
-            }}
-          ></div>
-
-          {/* Third Gradient */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: 'linear-gradient(rgba(30, 34, 170, 0), rgba(30, 34, 170, 0.2))',
-            }}
-          ></div>
+          />
         </div>
           {/* Image */}
           <img
             src={heroImage}
             alt="Hero Banner"
             className="w-full max-h-[517px] min-h-[286px] object-cover 
-            object-[50%_35%] rounded-primary filter brightness-150"
+            object-[50%_35%] rounded-primary"
           />
         <div 
           className="absolute bottom-0 flex flex-col items-center justify-center w-full mx-auto

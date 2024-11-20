@@ -5,20 +5,25 @@ import SearchIcon from "./icons/search-icon";
 import UserIcon from "./icons/user-icon";
 import ColoredCartIcon from "./icons/colored-cart-icon";
 import { phpFormatter } from "../../../utils/formatter";
+import ChevronLeftIcon from "./icons/chevron-left-icon";
 
 const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false)
+
   return ( 
     <header 
-      className="bg-primary-blue mx-auto w-full max-w-[1300px] rounded-b-primary
+      className={`bg-primary-blue
+       mx-auto w-full max-w-[1300px] rounded-b-primary
        px-3 flex items-center gap-3 fixed 
-       lg:gap-[25px] lg:px-[30px] text-white z-50"
+       lg:gap-[25px] lg:px-[30px] text-white z-50`}
     >
+
+       {isFocused && <div className="md:hidden"><ChevronLeftIcon/></div>}
       {/* Branding */}
-      <div className="flex-shrink-0">
+      <div className={`flex-shrink-0 ${isFocused && "md:block hidden"}`}>
         <a href="/" aria-label="Homepage">
           <img 
-            src={logo} 
+            src={logo}
             alt="Company Logo" 
             className="h-[14px] w-[106px] lg:h-[22px] lg:w-[160px] lg:mb-[7px]" 
           />

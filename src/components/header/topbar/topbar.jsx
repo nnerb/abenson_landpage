@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import ChevronDownIcon from "./icons/chevron-down-icon";
 
 const TopBar = () => {
@@ -10,10 +11,32 @@ const TopBar = () => {
     { label: "Download Absenson App", hasIcon: true,  },
   ]
 
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  console.log(window.scrollY)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 2) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return ( 
     <nav 
-      className="px-[30px] py-[6px] text-xs w-full bg-primary-bg-gray 
-      text-secondary-gray hidden lg:flex items-center"
+      className={`px-[30px] py-[6px] text-xs w-full bg-primary-bg-gray 
+      text-secondary-gray items-center ${isScrolled ? "hidden" : "lg:flex hidden"}`}
     >
       <ul className="flex items-center gap-5 w-full">
         {navItems.map((item, index) => (

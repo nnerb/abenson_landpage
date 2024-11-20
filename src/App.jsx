@@ -7,10 +7,12 @@ import HeroBanner from "./components/hero-banner"
 
 function App() {
   return (
-    <div className="w-full h-full overflow-hidden font-poppins-regular max-w-[1300px] mx-auto ">
-      <TopBar />
-      <Navbar />
-      <CategoryBar />
+    <div className="w-full h-full overflow-hidden font-poppins-regular max-w-[1300px] mx-auto">
+      <div className="fixed top-0 w-full mx-auto max-w-[1300px] z-50 bg-white">
+        <TopBar />
+        <Navbar />
+        <CategoryBar />
+      </div>
       <HeroBanner />
       <About/>
     </div>

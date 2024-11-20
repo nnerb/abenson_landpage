@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ChevronRightIcon from "./icons/chevron-right-icon";
 import TagIcon from "./icons/tag-icon";
 
@@ -29,10 +29,28 @@ const CategoryBar = () => {
     }
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 2) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return ( 
     <nav 
-      className="flex items-center w-full mt-[79px] mb-[13px] px-3
-      md:px-[30px] lg:px-[100px] xl:px-[148px]"
+      className={`${isScrolled ? "flex" : "lg:flex hidden"} items-center w-full mt-[67px] lg:mt-[79px] mb-[13px] px-3
+      md:px-[30px] lg:px-[100px] xl:px-[148px] bg-white`}
     >
       <ul 
         ref={listRef}

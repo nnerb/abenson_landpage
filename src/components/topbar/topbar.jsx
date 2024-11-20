@@ -13,22 +13,22 @@ const TopBar = () => {
   return ( 
     <nav 
       className="px-[30px] py-[6px] text-xs w-full bg-primary-gray 
-      text-secondary-gray hidden lg:flex items-center gap-5"
+      text-secondary-gray hidden lg:flex items-center"
     >
-     {navItems.map((item, index) => (
-        <div 
-          key={index}
-          className={`flex items-center gap-1 rounded-xl cursor-pointer
-          hover:bg-primary-gray-hover px-2 py-1 -mx-2 -my-1 ${
-            item.label === "Store Location" ? "ml-auto" : ""
-          }`}
-        >
-          <span>{item.label}</span>
-          {item.hasIcon && <ChevronDownIcon />}
-          {/* Hover Card */}
-
-        </div>
-      ))}
+      <ul className="flex items-center gap-5 w-full">
+        {navItems.map((item, index) => (
+          <li key={index} className={`${ item.label === "Store Location" ? "ml-auto" : "" }`}>
+            <button 
+              className="flex items-center gap-1 rounded-xl cursor-pointer
+              hover:bg-primary-gray-hover px-2 py-1 -mx-2 -my-1"
+            >
+            <span>{item.label}</span>
+            {item.hasIcon && <ChevronDownIcon />}
+            {/* Hover Card */}
+            </button>
+          </li>
+        ))}
+      </ul>
     </nav>
    );
 }

@@ -54,7 +54,7 @@ const CategoryBar = () => {
     >
       <ul 
         ref={listRef}
-        className="category-bar flex items-center w-full px-2 gap-4 text-primary-gray text-sm
+        className="flex items-center w-full px-2 gap-4 text-primary-gray text-sm
         md:justify-between lg:gap-2 overflow-x-auto lg:overflow-x-hidden scrollbar-hide"
       >
         {categoryBarItems.map((item) => (

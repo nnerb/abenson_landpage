@@ -3,6 +3,7 @@ import About from "./components/about"
 import Navbar from "./components/header/navbar/navbar"
 import TopBar from "./components/header/topbar/topbar"
 import HeroBanner from "./components/hero-banner"
+import CompanyOverview from "./components/company-overview"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       </div>
       <HeroBanner />
       <About/>
+      <CompanyOverview />
     </div>
   )
 }

@@ -14,7 +14,8 @@ export default {
         'primary-blue-hover': '#151877',
         'primary-bg-gray-hover': '#DADCE0',
         'secondary-gray': '#767676',
-        'primary-button': '#185BAA'
+        'primary-button': '#185BAA',
+        'primary-text': '#FCFCFD'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

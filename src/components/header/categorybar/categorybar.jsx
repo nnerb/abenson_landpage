@@ -31,7 +31,7 @@ const CategoryBar = () => {
 
   return ( 
     <nav 
-      className="flex items-center w-full mt-3 mb-[13px] px-[10px] 
+      className="flex items-center w-full mt-3 mb-[13px] px-3
       md:px-[30px] lg:px-[100px] xl:px-[148px]"
     >
       <ul 

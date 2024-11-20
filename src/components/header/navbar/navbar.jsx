@@ -10,8 +10,9 @@ const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false)
   return ( 
     <header 
-      className="bg-primary-blue w-full rounded-b-3xl px-3 flex items-center gap-3
-      lg:gap-[25px] lg:px-[30px] text-white"
+      className="bg-primary-blue mx-auto w-full max-w-[1300px] rounded-b-3xl
+       px-3 flex items-center gap-3 fixed 
+       lg:gap-[25px] lg:px-[30px] text-white z-50"
     >
       {/* Branding */}
       <div className="flex-shrink-0">

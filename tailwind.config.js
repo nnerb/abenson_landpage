@@ -8,8 +8,11 @@ export default {
     extend: {
       colors: {
         'primary-blue': '#1E22AA',
-        'primary-yellow' : '#FAE100',
-        'primary-blue-hover': '#151877'
+        'primary-yellow': '#FAE100',
+        'primary-gray': '#F1F2F6',
+        'primary-blue-hover': '#151877',
+        'primary-gray-hover': '#DADCE0',
+        'secondary-gray': '#767676'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

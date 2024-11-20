@@ -41,7 +41,6 @@ const Navbar = () => {
         </div>
       </div>
 
-    
       <div className="flex items-center gap-[15px]">
         {/* User Account */}
         <nav 
@@ -55,12 +54,12 @@ const Navbar = () => {
         </nav>
 
         {/* Cart */}
-        <div className="p-[6px] pr-[10px] mt-[5px] cursor-pointer">
+        <button className="p-[6px] pr-[10px] mt-[5px] cursor-pointer" aria-label="Open cart">
           <div className="hover:bg-primary-blue-hover rounded-2xl px-2 -mx-2 pt-2 -mt-2 flex items-center">
             <div className="relative">
-              <button className="lg:hidden" aria-label="Open cart">
+              <div className="lg:hidden">
                 <CartIcon />
-              </button>
+              </div>
               <div className="hidden lg:block">
                 <ColoredCartIcon/>
               </div>
@@ -77,7 +76,7 @@ const Navbar = () => {
               <span className="text-[10px] font-poppins leading-[2] ">{phpFormatter.format(999999)}</span>
             </div>  
           </div>
-        </div>
+        </button>
       </div>
     </header>
    );

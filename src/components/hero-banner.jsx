@@ -10,7 +10,11 @@ const HeroBanner = () => {
           <div
             className="absolute inset-0 rounded-primary"
             style={{
-              background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), linear-gradient(rgba(0, 0, 0, 0), rgba(30, 34, 170, 0.5)),linear-gradient(rgba(30, 34, 170, 0), rgba(30, 34, 170, 0.2))',
+              background: `
+                linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), 
+                linear-gradient(rgba(0, 0, 0, 0), rgba(30, 34, 170, 0.5)),
+                linear-gradient(rgba(30, 34, 170, 0), rgba(30, 34, 170, 0.2))
+              `
             }}
           />
         </div>

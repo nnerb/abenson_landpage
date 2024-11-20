@@ -1,10 +1,10 @@
 import { useState } from "react";
-import logo from "../../assets/images/logo.png"
-import CartIcon from "./icons/cart-icon";
+import logo from "../../../assets/images/logo.png"
+import CartIcon from "./icons/cart-icon"
 import SearchIcon from "./icons/search-icon";
 import UserIcon from "./icons/user-icon";
 import ColoredCartIcon from "./icons/colored-cart-icon";
-import { phpFormatter } from "../../utils/formatter";
+import { phpFormatter } from "../../../utils/formatter";
 
 const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false)

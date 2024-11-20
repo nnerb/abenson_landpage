@@ -1,5 +1,6 @@
-import Navbar from "./components/navbar/navbar"
-import TopBar from "./components/topbar/topbar"
+import Navbar from "./components/header/navbar/navbar"
+import TopBar from "./components/header/topbar/topbar"
+
 
 function App() {
   return (

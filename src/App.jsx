@@ -1,4 +1,5 @@
-// import CategoryBar from "./components/header/categorybar/categorybar"
+import CategoryBar from "./components/header/categorybar/categorybar"
+import About from "./components/about"
 import Navbar from "./components/header/navbar/navbar"
 import TopBar from "./components/header/topbar/topbar"
 import HeroBanner from "./components/hero-banner"
@@ -9,8 +10,9 @@ function App() {
     <div className="w-full h-full overflow-hidden font-poppins-regular max-w-[1300px] mx-auto ">
       <TopBar />
       <Navbar />
-      {/* <CategoryBar /> */}
+      <CategoryBar />
       <HeroBanner />
+      <About/>
     </div>
   )
 }

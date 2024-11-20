@@ -9,9 +9,10 @@ export default {
       colors: {
         'primary-blue': '#1E22AA',
         'primary-yellow': '#FAE100',
-        'primary-gray': '#F1F2F6',
+        'primary-gray': '#4C525C',
+        'primary-bg-gray': '#F1F2F6',
         'primary-blue-hover': '#151877',
-        'primary-gray-hover': '#DADCE0',
+        'primary-bg-gray-hover': '#DADCE0',
         'secondary-gray': '#767676'
       },
       fontFamily: {

@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  /* Hide scrollbar for Webkit-based browsers (Chrome, Safari, Edge) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for Firefox */
+  .scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+
 @font-face {
   font-family: 'Poppins-Regular';
   src: local("Poppins-Regular"), 
@@ -33,3 +46,4 @@
   src: local("Roboto-Bold"), 
   url('../src/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
+

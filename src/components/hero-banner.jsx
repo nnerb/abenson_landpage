@@ -6,18 +6,37 @@ const HeroBanner = () => {
       <div className="relative">
 
         {/* Gradient Overlay */}
-        <div
-          className="absolute inset-0 rounded-primary z-10"
-          style={{
-            background: 'linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(255, 255, 255, 0.3)), linear-gradient(to top, rgba(30, 34, 170, 0.5), rgba(0, 0, 0, 0)), linear-gradient(to top, rgba(30, 34, 170, 0.2), rgba(30, 34, 170, 0))',
-          }}
-        />
+        <div className="absolute inset-0 z-10">
+        {/* First Gradient */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3))',
+            }}
+          ></div>
+
+          {/* Second Gradient */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(rgba(0, 0, 0, 0), rgba(30, 34, 170, 0.5))',
+            }}
+          ></div>
+
+          {/* Third Gradient */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(rgba(30, 34, 170, 0), rgba(30, 34, 170, 0.2))',
+            }}
+          ></div>
+        </div>
           {/* Image */}
           <img
             src={heroImage}
             alt="Hero Banner"
             className="w-full max-h-[517px] min-h-[286px] object-cover 
-            object-[50%_35%] rounded-primary brightness-150"
+            object-[50%_35%] rounded-primary filter brightness-150"
           />
         <div 
           className="absolute bottom-0 flex flex-col items-center justify-center w-full mx-auto

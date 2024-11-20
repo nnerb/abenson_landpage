@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false)
   return ( 
     <header 
-      className="bg-primary-blue mx-auto w-full max-w-[1300px] rounded-b-3xl
+      className="bg-primary-blue mx-auto w-full max-w-[1300px] rounded-b-primary
        px-3 flex items-center gap-3 fixed 
        lg:gap-[25px] lg:px-[30px] text-white z-50"
     >
@@ -28,7 +28,7 @@ const Navbar = () => {
       {/* Search bar  */}
       <div className="pt-2 pb-[10px] lg:py-[15px] relative flex-1">
         <input 
-          className="rounded-3xl bg-[#4B4EBB] text-sm
+          className="rounded-[25px] bg-[#4B4EBB] text-sm
           py-[8.5px] px-[11px] pr-10 w-full placeholder-white
           focus:outline-none text-white focus:text-gray-500 focus:bg-white focus:placeholder-gray-600"
           placeholder="Summer Promo!"
@@ -36,9 +36,7 @@ const Navbar = () => {
           onBlur={() => setIsFocused(false)}  
         />
         <div className="absolute right-0 top-0 translate-y-[1.1rem] -translate-x-4 lg:translate-y-6 ">
-          <SearchIcon 
-            isFocused={isFocused}
-          />
+          {<SearchIcon isFocused={isFocused} />}
         </div>
       </div>
 

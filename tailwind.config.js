@@ -13,7 +13,8 @@ export default {
         'primary-bg-gray': '#F1F2F6',
         'primary-blue-hover': '#151877',
         'primary-bg-gray-hover': '#DADCE0',
-        'secondary-gray': '#767676'
+        'secondary-gray': '#767676',
+        'primary-button': '#185BAA'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -22,6 +23,9 @@ export default {
         'poppins-semibold': ['Poppins-SemiBold'],
         'poppins-bold': ['Poppins-Bold'],
         'roboto-bold': ['Roboto-Bold']
+      },
+      borderRadius: {
+        'primary': '20px'
       }
     },
   },

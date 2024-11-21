@@ -1,7 +1,7 @@
 const About = () => {
   return ( 
     <section 
-      className="flex flex-col gap-3 justify-center items-center text-primary-gray p-4 md:py-10
+      className="flex flex-col gap-3 justify-center items-center text-primary-gray px-4
       w-full max-w-[750px] mx-auto"
     >
       <h1 className="text-lg font-poppins-semibold md:text-[28px]">About us</h1>

@@ -4,6 +4,7 @@ import Navbar from "./components/header/navbar/navbar"
 import TopBar from "./components/header/topbar/topbar"
 import HeroBanner from "./components/hero-banner"
 import CompanyOverview from "./components/company-overview"
+import JoinUs from "./components/join-us/join-us"
 
 
 function App() {
@@ -14,9 +15,12 @@ function App() {
         <Navbar />
         <CategoryBar />
       </div>
-      <HeroBanner />
-      <About/>
-      <CompanyOverview />
+      <div className="flex flex-col gap-4 md:gap-10">
+        <HeroBanner />
+        <About/>
+        <CompanyOverview />
+        <JoinUs />
+      </div>
     </div>
   )
 }

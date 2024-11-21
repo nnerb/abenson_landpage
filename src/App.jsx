@@ -15,11 +15,11 @@ function App() {
         <Navbar />
         <CategoryBar />
       </div>
-      <div className="flex flex-col gap-4 md:gap-10">
+      <div className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px]">
         <HeroBanner />
         <About/>
         <CompanyOverview />
-        <JoinUs />
+        <JoinUs />  
       </div>
     </div>
   )

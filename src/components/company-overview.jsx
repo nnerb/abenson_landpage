@@ -30,7 +30,7 @@ const details = [
 
 const CompanyOverview = () => {
   return ( 
-    <section className="px-4 w-full flex items-center justify-center">
+    <section className="w-full flex items-center justify-center">
       <ul className="inline-flex gap-2 overflow-auto scrollbar-hide cursor-pointer md:cursor-default" >
         {details.map((detail) => (
           <li

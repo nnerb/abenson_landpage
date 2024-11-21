@@ -47,3 +47,20 @@
   url('../src/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
+/* .swiper-wrapper {
+  flex-shrink: 0 !important;
+  gap: 10px
+} */
+
+.swiper-slide {
+  flex: 0 0 auto; /* Prevent shrinking */
+  min-width: 161px;
+  min-height: 226.52px;
+}
+
+
+/* @media (min-width: 1024px) {
+  .swiper-wrapper {
+    gap: 20px;
+  }
+} */

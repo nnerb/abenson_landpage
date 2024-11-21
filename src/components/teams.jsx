@@ -1,0 +1,138 @@
+import data from "../assets/images/teams/data.png"
+import digitalDevelopment from "../assets/images/teams/digital-development.png"
+import digitalMarketing from "../assets/images/teams/digital-marketing.png"
+import digitalProducts from "../assets/images/teams/digital-products.png"
+import mobile from "../assets/images/teams/mobile.png"
+import shop from "../assets/images/teams/shop-online-operations.png"
+import smile from "../assets/images/teams/smile-serve.png"
+import development from "../assets/images/teams/systems-development.png"
+import uiux from "../assets/images/teams/ui-ux.png"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+
+const teamsData = [
+  { 
+    name: 'UX/UI',
+    description: 'Crafting visually stunning, user-friendly designs from wireframes to prototypes, ensuring our website and app dazzle and delight.',
+    color: '#5C4DBD',
+    card: uiux,
+  },
+  { 
+    name: 'Mobile App & Loyalty',
+    description: 'Managing our awesome mobile app and loyalty program to keep you coming back for more!',
+    color: '#1798C4',
+    card: mobile,
+  },
+  { 
+    name: 'Digital Marketing',
+    description: 'Conceptualizing campaigns, creating content, shooting fun videos, and optimizing paid media across Facebook, Instagram, TikTok, and more!',
+    color: '#D01665',
+    card: digitalMarketing,
+  },
+  { 
+    name: 'Digital Development',
+    description: 'Mastering cutting-edge software, eCommerce innovation, and AWS cloud for stellar online experiences.',
+    color: '#0457B1',
+    card: digitalDevelopment,
+  },
+  { 
+    name: 'Smile Serve (Logistics)',
+    description: 'Delivering smiles with timely deliveries and top-notch service, making every delivery a happy moment.',
+    color: '#D29605',
+    card: smile,
+  },
+  { 
+    name: 'Systems Development',
+    description: 'Innovating and automating omnichannel projects for seamless and efficient solutions.',
+    color: '#5AAE41',
+    card: development,
+  },
+  { 
+    name: 'Shop Online Operations',
+    description: 'Managing order fulfillment, handling inquiries, and converting sales through our dedicated online Personal Shoppers.',
+    color: '#D4C008',
+    card: shop
+  },
+  { 
+    name: 'Digital Products',
+    description: 'Ensuring accurate products, pricing, and promos, while expanding categories and brands to help customers decide.',
+    color: '#46992E',
+    card: digitalProducts
+  },
+  { 
+    name: 'Data',
+    description: 'Turning data into insights and decisions, making sense of numbers for smarter choices.',
+    color: '#6452D2',
+    card: data
+  },
+]
+
+const Teams = () => {
+  return ( 
+    <section className="w-full flex flex-col items-center gap-4 lg:gap-5">
+      <h1 className="text-lg font-poppins-semibold md:text-[28px] text-primary-gray">
+        Meet our teams
+      </h1>
+      <div className="w-full flex">
+        <Swiper
+          navigation={true}
+          slidesPerView="auto"
+          spaceBetween={10} 
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+          breakpoints={{
+            715: {
+              slidesPerView: 4
+            },
+            1024: {
+              spaceBetween: 20
+            }
+          }}
+        >
+          {teamsData.map((team) => (  
+            <div key={team.card}>
+              <SwiperSlide 
+                key={team.card} 
+                className="max-w-[161px] max-h-[226.52px]
+                slider-md:min-w-[161px] slider-md:min-h-[226.52px]
+                slider-md:max-w-[302px] slider-md:max-h-[423px]"
+              >
+                <img
+                  src={team.card}
+                  alt={team.name}
+                  className="relative min-w-[161px] slider-md:min-h-[226.52px]"
+                />
+
+                <div 
+                  className=" absolute inset-0 h-full flex items-center justify-center 
+                  text-white rounded-primary"
+                  style={{ background: team.color }}
+                >
+                  <div 
+                    className="p-3 flex flex-col justify-center items-center gap-2 slider-semi-lg:gap-5 lg:px-6 h-full
+                    slider-lg:gap-[25px] slider-lg:px-[30px]"
+                  >
+                    <h1 className="text-base slider-semi-lg:text-lg font-poppins-bold text-center">{team.name}</h1>
+                    <p className="text-center text-xs slider-semi-lg:text-sm slider-lg:text-lg">{team.description}</p>
+                    <a 
+                      className="text-primary-b-blue text-[10px] text-center cursor-pointer
+                     font-poppins-semibold bg-white py-1 px-3 rounded-[28px] w-full 
+                      lg:text-[15px] slider-semi-lg:px-4 md:py-[6px] slider-lg:px-7 ">
+                      Check for openings
+                    </a>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </div>
+          ))}
+        </Swiper>
+      </div>
+    </section>
+   );
+}
+ 
+export default Teams;

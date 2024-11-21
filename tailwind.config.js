@@ -15,7 +15,8 @@ export default {
         'primary-bg-gray-hover': '#DADCE0',
         'secondary-gray': '#767676',
         'primary-button': '#185BAA',
-        'primary-text': '#FCFCFD'
+        'primary-text': '#FCFCFD',
+        'primary-b-blue': '#185BAA'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -27,9 +28,15 @@ export default {
       },
       borderRadius: {
         'primary': '20px'
+      },
+      screens: {
+        'slider-md': '715px',
+        'slider-semi-lg': '832px',
+        'slider-lg': '1200px'
       }
     },
   },
   plugins: [],
 }
+
 

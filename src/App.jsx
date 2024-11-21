@@ -22,7 +22,6 @@ function App() {
         <CompanyOverview />
         <JoinUs />  
         <Teams />
-        <Teams />
       </div>
     </div>
   )

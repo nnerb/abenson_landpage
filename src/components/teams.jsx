@@ -101,31 +101,41 @@ const Teams = () => {
                 slider-md:min-w-[161px] slider-md:min-h-[226.52px]
                 slider-md:max-w-[302px] slider-md:max-h-[423px]"
               >
+              <div className="relative group">
                 <img
                   src={team.card}
                   alt={team.name}
-                  className="relative min-w-[161px] slider-md:min-h-[226.52px]"
+                  className="relative object-cover min-w-[161px] slider-md:min-h-[226.52px] "
                 />
-
+                {/* Content */}
                 <div 
                   className=" absolute inset-0 h-full flex items-center justify-center 
-                  text-white rounded-primary"
+                  text-white rounded-primary opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-300"
                   style={{ background: team.color }}
                 >
                   <div 
-                    className="p-3 flex flex-col justify-center items-center gap-2 slider-semi-lg:gap-5 lg:px-6 h-full
+                    className="p-3 h-full flex flex-col justify-center items-center gap-2 
+                    slider-semi-lg:gap-5 lg:px-6 
                     slider-lg:gap-[25px] slider-lg:px-[30px]"
                   >
-                    <h1 className="text-base slider-semi-lg:text-lg font-poppins-bold text-center">{team.name}</h1>
-                    <p className="text-center text-xs slider-semi-lg:text-sm slider-lg:text-lg">{team.description}</p>
+                    <h1 className="text-base font-poppins-bold text-center slider-semi-lg:text-lg">
+                      {team.name}
+                    </h1>
+                    <p className="text-center text-xs slider-semi-lg:text-sm slider-lg:text-lg">
+                      {team.description}
+                    </p>
                     <a 
                       className="text-primary-b-blue text-[10px] text-center cursor-pointer
-                     font-poppins-semibold bg-white py-1 px-3 rounded-[28px] w-full 
-                      lg:text-[15px] slider-semi-lg:px-4 md:py-[6px] slider-lg:px-7 ">
+                      font-poppins-semibold bg-white py-1 px-3 rounded-[28px] w-full 
+                      md:py-[6px] slider-semi-lg:px-4 lg:text-[15px] slider-lg:px-7"
+                      href="https://recruitment.dataon.com/abensongroup/#" target="_blank"
+                    >
                       Check for openings
                     </a>
                   </div>
                 </div>
+              </div>
               </SwiperSlide>
             </div>
           ))}

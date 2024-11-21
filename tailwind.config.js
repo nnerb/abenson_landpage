@@ -31,7 +31,7 @@ export default {
       },
       screens: {
         'slider-md': '715px',
-        'slider-semi-lg': '832px',
+        'slider-semi-lg': '850px',
         'slider-lg': '1200px'
       }
     },

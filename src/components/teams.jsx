@@ -120,7 +120,7 @@ const Teams = () => {
                     slider-semi-lg:gap-5 lg:px-6 
                     slider-lg:gap-[25px] slider-lg:px-[30px]"
                   >
-                    <h1 className="text-base font-poppins-bold text-center slider-semi-lg:text-lg">
+                    <h1 className="text-base font-poppins-bold text-center slider-semi-lg:text-lg lg:text-2xl">
                       {team.name}
                     </h1>
                     <p className="text-center text-xs slider-semi-lg:text-sm slider-lg:text-lg">

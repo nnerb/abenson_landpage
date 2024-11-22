@@ -16,7 +16,8 @@ export default {
         'secondary-gray': '#767676',
         'primary-button': '#185BAA',
         'primary-text': '#FCFCFD',
-        'primary-b-blue': '#185BAA'
+        'primary-b-blue': '#185BAA',
+        'secondary-blue': '#E5F6FF'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -27,13 +28,28 @@ export default {
         'roboto-bold': ['Roboto-Bold']
       },
       borderRadius: {
-        'primary': '20px'
+        'primary': '20px',
+        'secondary': '10px'
       },
       screens: {
         'slider-md': '715px',
         'slider-semi-lg': '850px',
-        'slider-lg': '1200px'
-      }
+        'slider-lg': '1200px',
+        'custom-xs': '320px',
+        'custom-sm': '481px',
+        'custom-md': '641px'
+      },
+      boxShadow: {
+        'combined': `
+          0px 0px 0px 0px #0000001A,
+          0px 4.07px 8.71px 0px #0000001A,
+          0px 15.68px 15.68px 0px #00000017,
+          0px 34.85px 20.91px 0px #0000000D,
+          0px 61.58px 24.4px 0px #00000003,
+          0px 96.43px 26.72px 0px #00000000
+        `,
+        'cart': '0px 0px 15px 0px #0000001A'
+      },
     },
   },
   plugins: [],

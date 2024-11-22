@@ -5,7 +5,7 @@ import TopBar from "./components/header/topbar/topbar"
 import HeroBanner from "./components/hero-banner"
 import CompanyOverview from "./components/company-overview"
 import JoinUs from "./components/join-us/join-us"
-import Teams from "./components/teams"
+import Teams from "./components/teams/teams"
 import JobOpenings from "./components/job-openings/job-openings"
 
 

@@ -77,13 +77,13 @@ const Teams = () => {
       <h1 className="text-lg font-poppins-semibold md:text-[28px] text-primary-gray">
         Meet our teams
       </h1>
-      <div className="w-full flex">
+      <div className="w-full relative flex">
         <Swiper
           navigation={true}
           slidesPerView="auto"
           spaceBetween={10} 
           modules={[Pagination, Navigation]}
-          className="mySwiper"
+          className="mySwiper !static"
           breakpoints={{
             715: {
               slidesPerView: 4
@@ -92,6 +92,7 @@ const Teams = () => {
               spaceBetween: 20
             }
           }}
+          
         >
           {teamsData.map((team) => (  
             <div key={team.card}>
@@ -105,13 +106,13 @@ const Teams = () => {
                 <img
                   src={team.card}
                   alt={team.name}
-                  className="relative object-cover min-w-[161px] slider-md:min-h-[226.52px] "
+                  className="relative object-cover min-w-[161px] slider-md:min-h-[226.52px]"
                 />
                 {/* Content */}
                 <div 
                   className=" absolute inset-0 h-full flex items-center justify-center 
-                  text-white rounded-primary opacity-0 
-                  group-hover:opacity-100 transition-opacity duration-300"
+                  text-white rounded-xl lg:rounded-primary opacity-0 
+                  group-hover:opacity-100 transition-opacity duration-300 "
                   style={{ background: team.color }}
                 >
                   <div 
@@ -140,6 +141,12 @@ const Teams = () => {
             </div>
           ))}
         </Swiper>
+        {/* <div className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-[60] bg-gray-800 text-white p-2 rounded-full">
+          &lt;
+        </div>
+        <div className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 z-[60] bg-gray-800 text-white p-2 rounded-full">
+          &gt;
+        </div>    */}
       </div>
     </section>
    );

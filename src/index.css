@@ -53,3 +53,24 @@
   min-height: 226.52px;
 }
 
+.swiper-button-next, .swiper-button-prev{
+  color: #767676 !important;
+}
+
+.swiper-button-next {
+  transform: translateX(1.6rem);
+}
+
+.swiper-button-prev {
+  transform: translateX(-1.5rem);
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+  font-size: 14px !important; 
+  background-color: white;
+  padding: 12px 15.4px;
+  border-radius: 100%;
+  font-weight: 700;
+  box-shadow: 0 0px 5px 0px rgb(0 0 0 / 0.25);
+}
+

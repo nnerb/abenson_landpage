@@ -1,12 +1,9 @@
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
 
 const Form = () => {
 
-  const [fileName, setFileName] = useState("");
-  // Define the Zod schema
   const schema = z.object({
     name: z
       .string()
@@ -15,31 +12,38 @@ const Form = () => {
       .string()
       .email({ message: "Invalid email" }),
     resume: z
-    .custom((v) => v instanceof File, {
-      message: 'Please attach your resume',
-    })
-  });
+      .instanceof(FileList)
+      .refine((files) => files.length > 0, { message: "Resume is required" }) 
+      .refine((files) => files.length === 1, { message: "Only one file is allowed" }) // Only one file allowed
+      .refine((files) => {
+        const file = files[0]; 
+        return file && file.type === "application/pdf"; // Ensure it's a PDF file
+      }, { message: "Only PDF file is allowed" })
+      .refine((files) => {
+        const file = files[0];
+        return file && file.size <= 5 * 1024 * 1024; // Ensure the file size is less than 5MB
+      }, { message: "File size must be less than 5MB" })
+    });
 
   const {
     register,
     handleSubmit,
     formState: { errors },
-    setValue,
+    control
   } = useForm({
     resolver: zodResolver(schema),
   })
 
-  const onSubmit = (data) => {
-    console.log("Form submitted: ", data)
-  }
+  const resumeFile = useWatch({
+    control,
+    name: "resume",
+  });
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFileName(file.name); // Display file name
-      setValue("resume", e.target.files); // Set the file list into the form value
-    }
+  const onSubmit = (data) => {
+    console.log("Form Submitted:", data);
   };
+
+  const fileName = resumeFile?.[0]?.name || '';
 
   return (
     <section 
@@ -105,8 +109,9 @@ const Form = () => {
               type="text"
               {...register("email")}
               className={`
-                px-[14px] py-3 rounded-[28px] text-xs outline-none 
-                appearance-none ring-1 peer w-full leading-[18px]
+                px-[14px] py-[13px] custom-sm:py-[11.5px] rounded-[28px] 
+                text-xs outline-none appearance-none ring-1 peer w-full leading-[18px]
+                custom-sm:text-[14px] custom-sm:leading-[21px]
                 ${ errors.email 
                   ? `ring-error text-error` 
                   :`ring-primary-bg-gray-hover focus:ring-primary-button`
@@ -116,7 +121,8 @@ const Form = () => {
             <label
               className={`
                 absolute top-0 left-0 -translate-y-[7px] translate-x-2 
-                bg-white text-[11px] leading-[14.3px] font-poppins-semibold px-1 transition-colors 
+                bg-white text-[11px] leading-[14.3px] font-poppins-semibold 
+                px-1 transition-colors  
                 ${ errors.email 
                   ? "text-error" 
                   : "peer-focus:text-primary-button"
@@ -140,14 +146,31 @@ const Form = () => {
               value={fileName}
               readOnly
               className={`
-                 px-[14px] py-3 rounded-full text-xs outline-none
-                appearance-none ring-1 leading-[18px] w-full pr-40 peer
+                px-[14px] py-3 custom-sm:py-[10.5px] rounded-full text-xs 
+                custom-sm:text-[14px] custom-sm:leading-[21px] outline-none
+                appearance-none ring-1 leading-[18px] w-full pr-36 peer
                 ${errors.resume 
                   ? "ring-error text-error" 
                   : "ring-primary-bg-gray-hover focus:ring-primary-button"
                 }
               `}
             />
+             <label
+              className={`
+                absolute top-0 right-0 text-[13px] custom-sm:text-[13.5px] 
+                font-poppins-medium cursor-pointer h-[42px] w-[131px]
+                grid place-items-center text-center leading-[14.82px] rounded-full 
+                ring-1
+                ${errors.resume ? "ring-error text-error" : "ring-primary-button text-primary-button"}
+              `}
+            >
+              Browse Files
+              <input
+                type="file"
+                {...register("resume")}
+                className="hidden peer"
+              />
+            </label>
             {/* Label for "Attach Resume" */}
             <label
               className={`
@@ -161,22 +184,6 @@ const Form = () => {
             >
               Attach Resume
             </label>
-            <label
-              className={`
-                absolute right-0 text-[14px] font-poppins-medium cursor-pointer
-                py-[13px] custom-sm:py-[13.5px] leading-[14.82px] px-4 rounded-full flex-shrink-0 ring-1 custom-sm:px-[25.5px] 
-                ${errors.resume ? "ring-error text-error" : "ring-primary-button text-primary-button"}
-              `}
-            >
-              Browse Files
-              <input
-                type="file"
-                {...register("resume")}
-                onChange={handleFileChange}
-                className="hidden peer"
-              />
-            </label>
-            
             {/* Error message for resume */}
             {errors.resume && (
               <p className="text-error text-[11px] leading-[12.54px] px-[14px] mt-[2px]">
@@ -188,8 +195,8 @@ const Form = () => {
           {/* Submit Button */}
           <button
             type="submit"
-            className="bg-primary-button text-[13px] leading-[14.82px] 
-            text-white py-[13.5px] px-6 rounded-full font-poppins-medium text-xs
+            className="bg-primary-button text-[13px] inline-flex items-center justify-center h-[42px]
+            text-white py-[13.5px] text-center rounded-full font-poppins-medium text-xs
             custom-sm:text-[15px] custom-sm:leading-[22.5px] custom-sm:tracking-[-0.3px]"
           >
             Submit

@@ -7,7 +7,7 @@ import CompanyOverview from "./components/company-overview"
 import JoinUs from "./components/join-us/join-us"
 import Teams from "./components/teams/teams"
 import JobOpenings from "./components/job-openings/job-openings"
-import Form from "./components/form"
+import Form from "./components/form/form"
 
 
 function App() {

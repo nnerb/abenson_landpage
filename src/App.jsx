@@ -18,25 +18,28 @@ function App() {
         <Navbar />
         <CategoryBar />
       </div>
-      <div 
-        className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px] 
-        mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
-      >
-        <HeroBanner />
-        <About/>
-        <CompanyOverview />
-        <JoinUs />  
-        <Teams />
-      </div>
-      <div className="px-4 custom-md:px-0 w-full">
-        <JobOpenings />
-      </div>
-      <div 
-        className="flex flex-col gap-4 md:gap-10 px-4 custom-sm:px-0 mt-10
-        mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
-      >
-        <Form />
-      </div>
+      {/* MAIN CONTENT GOES HEREEEEE */}
+      <main>
+        <div 
+          className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px] 
+          mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
+        >
+          <HeroBanner />
+          <About/>
+          <CompanyOverview />
+          <JoinUs />  
+          <Teams />
+        </div>
+        <div className="px-4 custom-md:px-0 w-full">
+          <JobOpenings />
+        </div>
+        <div 
+          className="flex flex-col gap-4 md:gap-10 px-4 custom-sm:px-0 mt-10
+          mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
+        >
+          <Form />
+        </div>
+      </main>
     </div>
   )
 }

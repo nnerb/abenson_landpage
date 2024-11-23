@@ -28,9 +28,7 @@ function App() {
         <JoinUs />  
         <Teams />
       </div>
-      <div className="px-4 custom-md:px-0 w-full">
-        <JobOpenings />
-      </div>
+      <JobOpenings />
       <div 
         className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px] 
         mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"

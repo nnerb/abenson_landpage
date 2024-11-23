@@ -7,13 +7,18 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-  
+
   /* Hide scrollbar for Firefox */
   .scrollbar-hide {
     scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  /* Ensure content can still be scrolled */
+  .scrollbar-hide {
+    overflow: hidden; /* Hide scrollbar but keep scroll functionality */
   }
 }
-
 
 @font-face {
   font-family: 'Poppins-Regular';
@@ -40,7 +45,6 @@
 }
 
 /* ROBOTO FONTS */
-
 @font-face {
   font-family: 'Roboto-Bold'; 
   src: local("Roboto-Bold"), 
@@ -53,7 +57,7 @@
   min-height: 226.52px;
 }
 
-.swiper-button-next, .swiper-button-prev{
+.swiper-button-next, .swiper-button-prev {
   color: #767676 !important;
 }
 
@@ -65,7 +69,7 @@
   transform: translateX(-1.5rem);
 }
 
-.swiper-button-next::after, .swiper-button-prev::after{
+.swiper-button-next::after, .swiper-button-prev::after {
   font-size: 14px !important; 
   background-color: white;
   padding: 12px 15.4px;
@@ -78,15 +82,12 @@
   transition: max-height 0.5s ease;
 }
 
-
-
 .vertical-trim {
-  display: inline-block; /* Ensures the text is treated as an inline element */
-  line-height: 0.78; /* Removes extra space from the line height */
+  display: inline-block; 
+  line-height: 0.78; 
 }
 
 .no-vertical-trim {
   display: block;
   line-height: normal;
 }
-

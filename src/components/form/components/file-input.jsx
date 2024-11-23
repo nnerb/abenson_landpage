@@ -1,11 +1,13 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 const FileInput = ({ label, register, error, fileName }) => (
   <div className="relative w-full">
+    {/* Read-only input displaying the file name */}
     <input
       type="text"
       value={fileName}
       readOnly
+      placeholder="my-resume.pdf"
       className={`
         px-[14px] py-3 custom-sm:py-[10.5px] rounded-full text-xs custom-sm:text-[14px] 
         custom-sm:leading-[21px] outline-none appearance-none ring-1 leading-[18px] 
@@ -13,6 +15,8 @@ const FileInput = ({ label, register, error, fileName }) => (
         ${error ? "ring-error text-error" : "ring-primary-bg-gray-hover focus:ring-primary-button"}
       `}
     />
+    
+    {/* Label for file input button */}
     <label
       className={`
         absolute top-0 right-0 text-[13px] custom-sm:text-[13.5px] font-poppins-medium 
@@ -22,12 +26,15 @@ const FileInput = ({ label, register, error, fileName }) => (
       `}
     >
       Browse Files
+      {/* Hidden file input */}
       <input
         type="file"
         {...register("resume")}
         className="hidden peer"
       />
     </label>
+    
+    {/* Actual label text */}
     <label
       className={`
         absolute top-0 left-0 -translate-y-[7px] translate-x-2 bg-white 
@@ -37,6 +44,8 @@ const FileInput = ({ label, register, error, fileName }) => (
     >
       {label}
     </label>
+    
+    {/* Error message */}
     {error && (
       <p className="text-error text-[11px] leading-[12.54px] px-[14px] mt-[2px]">
         {error.message}
@@ -45,13 +54,12 @@ const FileInput = ({ label, register, error, fileName }) => (
   </div>
 );
 
+// For type-checking
 FileInput.propTypes = {
   label: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,
-  error: PropTypes.object,             
-  fileName: PropTypes.string.isRequired, 
+  error: PropTypes.object,
+  fileName: PropTypes.string.isRequired,
 };
 
-
-
-export default FileInput
+export default FileInput;

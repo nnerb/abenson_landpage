@@ -68,7 +68,7 @@ const CategoryBar = () => {
           </li>
         ))}
       </ul>
-      <button className="lg:hidden" onClick={scrollRight}>
+      <button aria-label="next" className="lg:hidden" onClick={scrollRight}>
         <ChevronRightIcon />
       </button>
     </nav>

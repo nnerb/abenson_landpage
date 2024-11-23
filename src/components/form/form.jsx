@@ -36,43 +36,55 @@ const Form = () => {
             Send us your resume
           </p>
         </div>
-        <form className="w-full flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-          {/* Name Field */}
-          <InputField
-            label="Name"
-            name="name"
-            type="text"
-            register={register}
-            error={errors.name}
-          />
+        
+        {/* Form Starts Here */}
+        <form 
+          className="w-full flex flex-col gap-4" 
+          onSubmit={handleSubmit(onSubmit)} 
+          autoComplete="off"
+        >
+          <fieldset className="w-full flex flex-col gap-4">
+            <legend className="sr-only">Personal Information</legend>
+            {/* Name Field */}
+            <InputField
+              label="Name"
+              name="name"
+              type="text"
+              register={register}
+              error={errors.name}
+              placeholder="John Doe"
+            />
 
-          {/* Email Field */}
-          <InputField
-            label="Email Address"
-            name="email"
-            type="text"
-            register={register}
-            error={errors.email}
-          />
+            {/* Email Field */}
+            <InputField
+              label="Email Address"
+              name="email"
+              type="text"
+              register={register}
+              error={errors.email}
+              placeholder="johndoe@mail.com"
+            />
+          </fieldset>
 
-          {/* Resume Field */}
-          <FileInput
-            label="Attach Resume"
-            register={register}
-            error={errors.resume}
-            fileName={fileName}
-          />
+          <fieldset className="w-full">
+            <legend className="sr-only">File Upload</legend>
+            {/* Resume Field */}
+            <FileInput
+              label="Attach Resume"
+              register={register}
+              error={errors.resume}
+              fileName={fileName}
+            />
+          </fieldset>
 
           {/* Submit Button */}
           <button
             type="submit"
-            className="
-            bg-primary-button text-[13px] inline-flex 
+            className="bg-primary-button text-[13px] inline-flex 
               items-center justify-center h-[42px] text-white py-[13.5px]
               text-center rounded-full font-poppins-medium text-xs 
               custom-sm:text-[15px] custom-sm:leading-[22.5px] 
-              custom-sm:tracking-[-0.3px]
-            "
+              custom-sm:tracking-[-0.3px]"
           >
             Submit
           </button>

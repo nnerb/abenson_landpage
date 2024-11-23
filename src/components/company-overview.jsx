@@ -45,6 +45,7 @@ const CompanyOverview = () => {
             />
             <img
               src={detail.image}
+              alt="Image representing the company's mission, vision, and core values."
               className="object-cover h-full w-full rounded-primary"
             />
             <h1 className="absolute top-[13px] left-[13px] md:top-[30px] md:left-[30px] text-[14px] lg:text-[28px] text-primary-gray font-poppins-medium">{detail.title}</h1>

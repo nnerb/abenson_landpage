@@ -48,10 +48,10 @@ const CompanyOverview = () => {
               alt="Image representing the company's mission, vision, and core values."
               className="object-cover h-full w-full rounded-primary"
             />
-            <h1 className="absolute top-[13px] left-[13px] md:top-[30px] md:left-[30px] text-[14px] lg:text-[28px] text-primary-gray font-poppins-medium">{detail.title}</h1>
+            <h1 className="absolute top-[13px] left-[13px] md:top-[30px] md:left-[30px] text-[14px] md:text-xl lg:text-[28px] text-primary-gray font-poppins-medium">{detail.title}</h1>
             <p 
               className="absolute bottom-[13px] left-[13px] right-[13px] text-primary-text font-poppins-semibold text-xs
-              md:bottom-[30px] md:left-[30px] md:right-[30px] lg:text-2xl"
+              md:bottom-[30px] md:left-[30px] md:right-[30px] md:text-lg lg:text-2xl"
               dangerouslySetInnerHTML={{
                 __html: detail.title === "MISSION" 
                 ? detail.description

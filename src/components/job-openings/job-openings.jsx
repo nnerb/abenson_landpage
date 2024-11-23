@@ -53,7 +53,7 @@ const JobOpenings = () => {
   return (
     <section 
       className="relative w-full bg-secondary-blue 
-      text-primary-gray z-10 overflow-hidden rounded-[10px]"
+      text-primary-gray z-10 overflow-hidden rounded-[10px] min-w-[328px]"
     >
       <MobileVector />
       {currentWidth >= 360 ? <DesktopVector/> : <MobileVector/>}

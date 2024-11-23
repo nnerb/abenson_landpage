@@ -26,10 +26,16 @@ const Form = () => {
   const fileName = resumeFile?.[0]?.name || "";
 
   return (
-    <section className="overflow-hidden text-primary-gray px-4 custom-sm:px-0 w-full mx-auto max-w-[1300px] custom-sm:max-w-[362px]">
+    <section 
+      className="overflow-hidden text-primary-gray px-[1px]
+      custom-sm:px-0 w-full mx-auto min-w-[300px] custom-sm:max-w-[362px]"
+    >
       <div className="py-4 custom-sm:px-4 flex flex-col items-center gap-[30px] w-full">
         <div className="w-full flex flex-col items-center gap-2 custom-sm:gap-3 max-w-[280px] px-6">
-          <h1 className="text-lg custom-sm:text-[28px] custom-sm:leading-9 font-poppins-semibold vertical-trim custom-sm:no-vertical-trim">
+          <h1 
+            className="text-lg custom-sm:text-[28px] custom-sm:leading-9 
+            font-poppins-semibold vertical-trim custom-sm:no-vertical-trim"
+          >
             Not on the List?
           </h1>
           <p className="text-xs leading-[18px] custom-sm:text-xl custom-sm:leading-[22.8px]">

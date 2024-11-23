@@ -21,11 +21,11 @@ function App() {
       </div>
       {/* MAIN CONTENT GOES HEREEEEE */}
       <main>
+        <HeroBanner />
         <div 
           className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px] 
-          mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
+          mb-4 md:mb-10 w-full mx-auto max-w-[1300px] mt-4 md:mt-10"
         >
-          <HeroBanner />
           <About/>
           <CompanyOverview />
           <JoinUs />  

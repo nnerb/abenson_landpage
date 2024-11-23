@@ -2,9 +2,8 @@ import heroImage from "../assets/images/hero-image.jpg";
 
 const HeroBanner = () => {
   return (
-    <section className="mt-6 lg:mt-[140px] z-0">
+    <section className="mt-6 lg:mt-[140px] z-0 w-full mx-auto max-w-[1300px] px-4 lg:px-[30px]">
       <div className="relative">
-
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-10">
           <div

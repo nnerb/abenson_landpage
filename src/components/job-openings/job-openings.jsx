@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import Vector from "./svg/vector";
+import DesktopVector from "./svg/desktop-vector";
+import MobileVector from "./svg/mobile-vector";
 
 const JobOpenings = () => {
   const jobOpeningsData = [
@@ -14,27 +15,36 @@ const JobOpenings = () => {
 
   const [showAll, setShowAll] = useState(false)
   const [visibleItems, setVisibleItems] = useState(3)
+  const [currentWidth, setCurrentWidth] = useState(window.innerWidth)
 
-  const updateVisibleItems = () => {
-    const width = window.innerWidth;
-    if (width >= 1024) {
-      setVisibleItems(6)
-    } else if (width >= 641) {
-      setVisibleItems(4)
-    } else {
-      setVisibleItems(3)
-    }
-  };
+  
 
   // Update the visible items count when the screen is resized
   useEffect(() => {
+    const handleResize = () => {
+      setCurrentWidth(window.innerWidth)
+    }
+
+    const updateVisibleItems = () => {
+
+      if (currentWidth >= 1024) {
+        setVisibleItems(6)
+      } else if (currentWidth >= 641) {
+        setVisibleItems(4)
+      } else {
+        setVisibleItems(3)
+      }
+    };
+
     updateVisibleItems();
     window.addEventListener("resize", updateVisibleItems)
+    window.addEventListener("resize", handleResize)
 
     return () => {
       window.removeEventListener("resize", updateVisibleItems)
+      window.removeEventListener("resize", handleResize)
     };
-  }, []);
+  }, [currentWidth]);
 
 
   const toggleShowAll = () => setShowAll(prev => !prev);
@@ -43,14 +53,17 @@ const JobOpenings = () => {
   return (
     <section 
       className="relative w-full bg-secondary-blue 
-      text-primary-gray px-4 md:px-0 z-10 overflow-hidden"
+      text-primary-gray z-10 overflow-hidden rounded-[10px]"
     >
-      <Vector />
+      <MobileVector />
+      {currentWidth >= 360 ? <DesktopVector/> : <MobileVector/>}
       <div 
         className="py-6 px-4 lg:px-[30px] lg:py-[50px] rounded-secondary 
          lg:gap-10 flex flex-col !z-100 items-center justify-center w-full gap-6 z-20"
       >
-        <h1 className="text-lg font-poppins-semibold custom-md:text-[28px] md:leading-[36px]">Featured Job Openings</h1>
+        <h1 className="text-lg font-poppins-semibold custom-md:text-[28px] md:leading-[36px]">
+          Featured Job Openings
+        </h1>
 
         {/* Grid with responsive columns */}
         <div 

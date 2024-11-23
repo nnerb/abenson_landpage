@@ -132,15 +132,23 @@ const Teams = () => {
                 slider-md:max-w-[302px] slider-md:max-h-[423px]"
               >
               <div className="relative group">
-                {/* <img
+                <img
                   src={team.card}
                   alt={team.name}
-                  className="relative object-cover min-w-[161px] slider-md:min-h-[226.52px]"
-                /> */}
-                <div style={{ background: team.iconColor }}>
+                  className="object-cover min-w-[161px] slider-md:min-h-[226.52px]"
+                /> 
+                {/* <div 
+                  style={{ background: team.iconColor }} 
+                  className="flex flex-col items-center justify-center gap-"
+                >
                   <img src={team.icon}/>
-                  <p>{team.name}</p>
-                </div>
+                  <p 
+                    className="font-poppins-bold text-[12.83px] leading-[19.24px] text-center text-white
+                    lgtext-2xl leading slider-semi-lg:text-lg lg:text-2xl"
+                  >
+                    {team.name}
+                  </p>
+                </div> */}
                 {/* Content */}
                 <div 
                   className=" absolute inset-0 h-full flex items-center justify-center 
@@ -153,7 +161,7 @@ const Teams = () => {
                     slider-semi-lg:gap-5 lg:px-6 
                     slider-lg:gap-[25px] slider-lg:px-[30px]"
                   >
-                    <h1 className="text-base font-poppins-bold text-center slider-semi-lg:text-lg lg:text-2xl">
+                    <h1 className="text-[12.83px] font-poppins-bold text-center slider-semi-lg:text-lg lg:text-2xl">
                       {team.name}
                     </h1>
                     <p className="text-center text-xs slider-semi-lg:text-sm slider-lg:text-lg">

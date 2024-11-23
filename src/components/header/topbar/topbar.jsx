@@ -14,8 +14,6 @@ const TopBar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
-  console.log(window.scrollY)
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 2) {

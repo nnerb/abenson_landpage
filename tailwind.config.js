@@ -17,7 +17,8 @@ export default {
         'primary-button': '#185BAA',
         'primary-text': '#FCFCFD',
         'primary-b-blue': '#185BAA',
-        'secondary-blue': '#E5F6FF'
+        'secondary-blue': '#E5F6FF',
+        'error': '#FF4F44'
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],

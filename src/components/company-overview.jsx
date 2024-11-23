@@ -40,7 +40,7 @@ const CompanyOverview = () => {
             <div
               className="absolute inset-0 rounded-primary"
               style={{
-                background: `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 1, 44, 0.7))`
+                background: `linear-gradient(180deg, rgba(0, 0, 0, 0) 45.75%, rgba(0, 1, 44, 0.7) 68.25%)`
               }}
             />
             <img

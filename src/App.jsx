@@ -7,6 +7,7 @@ import CompanyOverview from "./components/company-overview"
 import JoinUs from "./components/join-us/join-us"
 import Teams from "./components/teams/teams"
 import JobOpenings from "./components/job-openings/job-openings"
+import Form from "./components/form"
 
 
 function App() {
@@ -28,6 +29,12 @@ function App() {
         <Teams />
       </div>
       <JobOpenings />
+      <div 
+        className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px] 
+        mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
+      >
+        <Form />
+      </div>
     </div>
   )
 }

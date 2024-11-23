@@ -78,3 +78,10 @@
   transition: max-height 0.5s ease;
 }
 
+
+
+.vertical-trim {
+  display: inline-block; /* Ensures the text is treated as an inline element */
+  line-height: 0.78; /* Removes extra space from the line height */
+}
+

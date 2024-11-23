@@ -11,9 +11,9 @@ const HeroBanner = () => {
             className="absolute inset-0 rounded-primary"
             style={{
               background: `
-                linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), 
-                linear-gradient(rgba(0, 0, 0, 0), rgba(30, 34, 170, 0.5)),
-                linear-gradient(rgba(30, 34, 170, 0), rgba(30, 34, 170, 0.2))
+                linear-gradient(180deg, rgba(0, 0, 0, 0) 26.69%, rgba(0, 0, 0, 0.3) 58.99%),
+                linear-gradient(180deg, rgba(0, 0, 0, 0) 48.44%, rgba(30, 34, 170, 0.5) 100%),
+                linear-gradient(180deg, rgba(30, 34, 170, 0) 0%, rgba(30, 34, 170, 0.2) 100%)
               `
             }}
           />

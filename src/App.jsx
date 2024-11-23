@@ -32,7 +32,7 @@ function App() {
         <JobOpenings />
       </div>
       <div 
-        className="flex flex-col gap-4 md:gap-10 px-4 lg:px-[30px] 
+        className="flex flex-col gap-4 md:gap-10 px-4 custom-sm:px-0 mt-10
         mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
       >
         <Form />

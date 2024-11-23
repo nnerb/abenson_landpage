@@ -85,3 +85,8 @@
   line-height: 0.78; /* Removes extra space from the line height */
 }
 
+.no-vertical-trim {
+  display: block;
+  line-height: normal;
+}
+

@@ -8,6 +8,7 @@ import JoinUs from "./components/join-us/join-us"
 import Teams from "./components/teams/teams"
 import JobOpenings from "./components/job-openings/job-openings"
 import Form from "./components/form/form"
+import FollowUs from "./components/follow-us"
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           mb-4 md:mb-10 w-full mx-auto max-w-[1300px]"
         >
           <Form />
+          <FollowUs />
         </div>
       </main>
     </div>

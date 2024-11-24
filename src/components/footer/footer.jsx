@@ -20,7 +20,7 @@ const Footer = () => {
         <Banner />
         <Subscribe />
       </div>
-      <div className="relative z-10 px-4">
+      <div className="relative z-10 px-4 md:hidden">
         <Socials />
       </div>
       {/* Overlay */}

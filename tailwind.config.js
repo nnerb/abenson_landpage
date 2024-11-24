@@ -38,7 +38,8 @@ export default {
         'slider-lg': '1200px',
         'custom-xs': '320px',
         'custom-sm': '481px',
-        'custom-md': '641px'
+        'custom-md': '641px',
+        'custom-semi-md': '850px',
       },
       boxShadow: {
         'combined': `

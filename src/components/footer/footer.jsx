@@ -7,16 +7,22 @@ const Footer = () => {
   return (
     <footer
       className="
-        relative h-[831.8px] bg-no-repeat bg-cover bg-footer-image
-        md:bg-md-position flex flex-col gap-6
-        lg:h-[569px] 
+        relative h-[831.8px] bg-no-repeat bg-footer-image flex flex-col gap-6
+        bg-sm-position bg-sm-bg-size
+        md:bg-md-position md:bg-md-bg-size
+        lg:h-[569px] lg:py-[58px] lg:px-[64.02px]
       "
-      style={{
-        backgroundSize: "890%", 
-        backgroundPosition: "1% 36%",
-      }}
+      // style={{
+      //   backgroundSize: "203%", 
+      //   backgroundPosition: "0.8% 34.6%",
+      // }}
     >
-      <div className="min-w-[280px]">
+      <div 
+        className="
+          min-w-[280px] w-full lg:w-[455px] lg:max-w-[452px]
+          lg:flex lg:flex-col-reverse lg:gap-[34px] 
+        "
+      >
         <Banner />
         <Subscribe />
       </div>

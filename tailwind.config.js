@@ -58,9 +58,13 @@ export default {
         'primary-app': 'linear-gradient(182.36deg, #2EC5FE 1.98%, #38D2FD 73.35%)'
       },
       backgroundPosition: {
-        'md-position': "1% 34.5%",
-        'sm-position': '',
+        'sm-position': '1% 35%',
+        'md-position': '0.8% 34.6%',
       },
+      backgroundSize: {
+        'sm-bg-size':  '890%',
+        'md-bg-size' : '203%'
+      }
     },
   },
   plugins: [],

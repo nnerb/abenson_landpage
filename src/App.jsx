@@ -9,6 +9,7 @@ import Teams from "./components/teams/teams"
 import JobOpenings from "./components/job-openings/job-openings"
 import Form from "./components/form/form"
 import FollowUs from "./components/follow-us/follow-us"
+import Footer from "./components/footer/footer"
 
 
 function App() {
@@ -40,6 +41,11 @@ function App() {
         >
           <Form />
           <FollowUs />
+        </div>
+        <div className="flex-col flex gap-2">
+          <Footer />
+          <Footer />
+          <Footer />
         </div>
       </main>
     </div>

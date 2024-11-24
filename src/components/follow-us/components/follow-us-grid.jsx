@@ -4,12 +4,12 @@ const FollowUsGrid = () => {
   return ( 
     <>
      {followUsDetails.map((detail, index) => (
-          <li key={index}>
+          <li key={index} className="flex-1 custom-sm:flex-auto">
             <a 
               href={detail.url} 
               target="_blank"
               className="
-                flex gap-[9.77px] flex-1 custom-sm:flex-auto 
+                flex gap-[9.77px]  
                 md:items-center lg:gap-4
               "
             >

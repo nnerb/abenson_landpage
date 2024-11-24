@@ -18,7 +18,7 @@ export default {
         'primary-text': '#FCFCFD',
         'primary-b-blue': '#185BAA',
         'secondary-blue': '#E5F6FF',
-        'error': '#FF4F44'
+        'error': '#FF4F44',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -50,6 +50,15 @@ export default {
           0px 96.43px 26.72px 0px #00000000
         `,
         'cart': '0px 0px 15px 0px #0000001A'
+      },
+      backgroundImage: {
+        'footer-image': 'url("./assets/images/footer.jpg")',
+        'app-image': 'url("./assets/images/app.png")',
+        'primary-app': 'linear-gradient(182.36deg, #2EC5FE 1.98%, #38D2FD 73.35%)'
+      },
+      backgroundPosition: {
+        'md-position': "1% 34.5%",
+        'sm-position': '',
       },
     },
   },

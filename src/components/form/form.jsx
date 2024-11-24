@@ -80,6 +80,7 @@ const Form = () => {
               register={register}
               error={errors.resume}
               fileName={fileName}
+              placeholder="johndoe-resume.pdf"
             />
           </fieldset>
 

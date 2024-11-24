@@ -1,13 +1,13 @@
 import PropTypes from "prop-types";
 
-const FileInput = ({ label, register, error, fileName }) => (
+const FileInput = ({ label, register, error, fileName, placeholder }) => (
   <div className="relative w-full">
     {/* Read-only input displaying the file name */}
     <input
       type="text"
       value={fileName}
       readOnly
-      placeholder="my-resume.pdf"
+      placeholder={placeholder}
       className={`
         px-[14px] py-3 custom-sm:py-[10.5px] rounded-full text-xs custom-sm:text-[14px] 
         custom-sm:leading-[21px] outline-none appearance-none ring-1 leading-[18px] 
@@ -60,6 +60,7 @@ FileInput.propTypes = {
   register: PropTypes.func.isRequired,
   error: PropTypes.object,
   fileName: PropTypes.string.isRequired,
+  placeholder: PropTypes.string
 };
 
 export default FileInput;

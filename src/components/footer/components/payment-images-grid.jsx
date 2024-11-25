@@ -15,7 +15,7 @@ const PaymentImagesGrid = () => {
       className="
         grid grid-cols-2 grid-rows-3 h-[92px] 
         max-w-[274px] md:max-w-[133px] mx-auto
-        items-center
+        place-items-center items-center
       "
     >
     {paymentMethodsImages.map((image, index) => (

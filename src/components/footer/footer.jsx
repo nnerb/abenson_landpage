@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer
       className="
-        relative h-full bg-no-repeat bg-footer-image 
+        relative h-full bg-no-repeat bg-footer-image
         flex flex-col gap-6 bg-sm-position bg-sm-bg-size 
         md:gap-5 md:bg-md-position md:bg-md-bg-size
         lg:py-[58px] lg:px-4 lg:flex-row lg:items-start lg:justify-between 
@@ -45,11 +45,14 @@ const Footer = () => {
           <Socials />
         </div>
         <Contacts />
-        <div>
+        <div className="md:hidden">
           <PaymentImagesGrid />
         </div>
       </div>
       {/* Overlay */}
+      <div>
+
+      </div>
       <div className="absolute inset-0 bg-primary-blue opacity-[93%] z-0" />
     </footer>
   );

@@ -21,7 +21,7 @@ const ContactDetailsSection = ({
         <li
           className={`
             py-4 px-2 flex flex-col border-t-[1px]
-            md:py-0 
+            md:py-0 last:border-b-[1px]
             ${expandedIndex === index ? "md:mb-4" : ""}
           `}
           key={index}

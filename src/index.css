@@ -16,7 +16,7 @@
 
   /* Ensure content can still be scrolled */
   .scrollbar-hide {
-    overflow: hidden; /* Hide scrollbar but keep scroll functionality */
+    scrollbar-width: none; /* Hide scrollbar but keep scroll functionality */
   }
 }
 

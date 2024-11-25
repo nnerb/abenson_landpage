@@ -51,6 +51,12 @@
   url('../src/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'WorkSans-SemiBold'; 
+  src: local("WorkSans-Semi"), 
+  url('../src/assets/fonts/Work_Sans/WorkSans-SemiBold.ttf') format('truetype');
+}
+
 .swiper-slide {
   flex: 0 0 auto; /* Prevent shrinking */
   min-width: 161px;

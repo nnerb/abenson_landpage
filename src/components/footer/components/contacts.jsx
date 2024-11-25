@@ -7,9 +7,9 @@ import TrailingIcon from "../icon/trailing-icon";
 const Contacts = () => {
 
   return ( 
-    <ul className="last:border-b-[1px]">
+    <ul className="last:border-b-[1px] lg:min-w-[308px]">
       <OnlinePersonalShopperSection onlinePersonalShopper={onlinePersonalShopper} />
-      <li className="py-4 px-2 border-t-[1px] md:py-0">
+      <li className="py-4 px-2 border-t-[1px] md:py-0 lg:px-2">
         <a 
           className="flex flex-col gap-4" 
           href="https://www.abenson.com/pages/viber-personal-shopper"

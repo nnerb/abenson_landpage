@@ -9,7 +9,8 @@ const Banner = () => {
   return ( 
     <div 
       className="
-        absolute top-0 h-[360px] md:h-[148px] w-full z-10
+        absolute top-0 h-[360px] w-full z-10
+        md:h-[148px]
         lg:static
       "
     >
@@ -20,8 +21,9 @@ const Banner = () => {
             bg-primary-app w-full h-[94px] flex items-end pb-[4.91px] 
             custom-sm:pb-[15px]
             md:h-[116px]
-            lg:bg-none lg:relative lg:h-[288px] lg:items-center
-            lg:pb-0
+            lg:bg-none lg:relative lg:h-[220px] lg:max-w-[380px] lg:items-center
+            xl:items-center lg:pb-0 xl:max-w-full
+            xl:h-[288px] xl:w-full
           "
         >
           {/* Banner image */}         

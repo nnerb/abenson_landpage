@@ -7,7 +7,7 @@ const Subscribe = () => {
         relative px-[15.5px] mt-[105px] pt-6 z-10 text-white max-w-[440px] mx-auto
         md:pt-[46px] lg:mt-0 
         lg:max-w-none lg:mx-0 lg:pt-0
-        lg:px-[5.98px]
+        lg:px-[5.98px] lg:min-w
       "
     >
       <div className="flex flex-col gap-2 w-full">
@@ -30,7 +30,7 @@ const Subscribe = () => {
             className="
               text-xs leading-[18px] text-center
               md:text-[14px] md:leading-[21px]
-              md:text-nowrap
+              md:text-nowrap lg:text-wrap
             "
           >
             Join our subscription and get P100 on your first online order!

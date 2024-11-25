@@ -3,7 +3,7 @@ import bannerIcon from "../../../assets/images/app.png"
 
 const BannerIcon = () => {
   return ( 
-    <img src={bannerIcon} className="hidden lg:block"/>
+    <img src={bannerIcon} className="hidden xl:block"/>
    );
 }
  

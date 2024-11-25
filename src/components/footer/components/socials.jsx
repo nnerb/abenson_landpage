@@ -1,9 +1,9 @@
-import IgIcon from "../icon/ig-icon";
-import TiktokIcon from "../icon/tiktok-icon";
+import IgIcon from "../icons/ig-icon";
+import TiktokIcon from "../icons/tiktok-icon";
 
-import WhiteFbIcon from "../icon/white-fb";
-import YtIcon from "../icon/yt-icon";
-import ViberIcon from "../icon/viber-icon"
+import WhiteFbIcon from "../icons/white-fb";
+import YtIcon from "../icons/yt-icon";
+import ViberIcon from "../icons/viber-icon"
 
 
 const socialsData = [

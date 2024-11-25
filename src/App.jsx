@@ -2,7 +2,7 @@ import CategoryBar from "./components/header/categorybar/categorybar"
 import About from "./components/about"
 import Navbar from "./components/header/navbar/navbar"
 import TopBar from "./components/header/topbar/topbar"
-import HeroBanner from "./components/hero-banner"
+import HeroBanner from "./components/hero-banner/hero-banner"
 import CompanyOverview from "./components/company-overview"
 import JoinUs from "./components/join-us/join-us"
 import Teams from "./components/teams/teams"
@@ -10,7 +10,6 @@ import JobOpenings from "./components/job-openings/job-openings"
 import Form from "./components/form/form"
 import FollowUs from "./components/follow-us/follow-us"
 import Footer from "./components/footer/footer"
-
 
 function App() {
   return (

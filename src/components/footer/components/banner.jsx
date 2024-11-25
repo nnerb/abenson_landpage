@@ -1,9 +1,9 @@
-import AppStoreIcon from "../icon/app-store";
-import GooglePlayIcon from "../icon/google-play";
+import AppStoreIcon from "../icons/app-store";
+import GooglePlayIcon from "../icons/google-play";
 import qr from "../../../assets/images/qr.png"
-import BannerIcon from "../icon/banner-icon";
-import BannerIconSm from "../icon/banner-icon-sm";
-import BannerIconMd from "../icon/banner-icon-md";
+import BannerIcon from "../icons/banner-icon";
+import BannerIconSm from "../icons/banner-icon-sm";
+import BannerIconMd from "../icons/banner-icon-md";
 
 const Banner = () => {
   return ( 

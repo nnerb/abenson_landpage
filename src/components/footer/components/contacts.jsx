@@ -2,7 +2,7 @@
 import ContactDetailsSection from "./contact-details";
 import OnlinePersonalShopperSection from "./online-personal-shopping";
 import { contactDetails, onlinePersonalShopper } from "../data/contacts-data";
-import TrailingIcon from "../icon/trailing-icon";
+import TrailingIcon from "../icons/trailing-icon";
 
 const Contacts = () => {
 

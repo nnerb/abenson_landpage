@@ -1,7 +1,7 @@
 
 import { useState } from "react";
-import CallIcon from "../icon/call-icon";
-import ChevronDownIcon from "../icon/chevron-down-icon";
+import CallIcon from "../icons/call-icon";
+import ChevronDownIcon from "../icons/chevron-down-icon";
 import PropTypes from "prop-types";
 
 const ContactDetailsSection = ({

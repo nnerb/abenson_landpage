@@ -55,9 +55,14 @@ export default {
         'cart': '0px 0px 15px 0px #0000001A'
       },
       backgroundImage: {
+        'custom-gradient': `
+          linear-gradient(180deg, rgba(0, 0, 0, 0) 26.69%, rgba(0, 0, 0, 0.3) 58.99%), 
+          linear-gradient(180deg, rgba(0, 0, 0, 0) 48.44%, rgba(30, 34, 170, 0.5) 100%), 
+          linear-gradient(180deg, rgba(30, 34, 170, 0) 0%, rgba(30, 34, 170, 0.2) 100%)
+        `,
         'footer-image': 'url("./assets/images/footer.jpg")',
         'app-image': 'url("./assets/images/app.png")',
-        'primary-app': 'linear-gradient(182.36deg, #2EC5FE 1.98%, #38D2FD 73.35%)'
+        'primary-app': 'linear-gradient(182.36deg, #2EC5FE 1.98%, #38D2FD 73.35%)',
       },
       backgroundPosition: {
         'sm-position': '1% 35%',

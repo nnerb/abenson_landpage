@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CallIcon from "../icon/call-icon";
+import CallIcon from "../icons/call-icon";
 import PropTypes from "prop-types";
-import ChevronDownIcon from "../icon/chevron-down-icon";
+import ChevronDownIcon from "../icons/chevron-down-icon";
 
 const OnlinePersonalShopperSection = ({ onlinePersonalShopper }) => {
   const [isExpanded, setIsExpanded] = useState(false);

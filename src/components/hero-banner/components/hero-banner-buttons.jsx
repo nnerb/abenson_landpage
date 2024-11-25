@@ -1,6 +1,6 @@
 const HerroBannerButtons = () => {
   return ( 
-    <div className="flex items-center justify-center gap-[6px] lg:gap-4 w-full mt-4">
+    <div className="flex items-center justify-center gap-[6px] md:gap-3 lg:gap-4 w-full mt-4">
       <button 
         className="rounded-full border bg-white border-none ring-1 max-w-[230px]
         text-[13px] leading-[14.82px] gap-[3px] text-primary-button py-[8.5px] px-[14px] 

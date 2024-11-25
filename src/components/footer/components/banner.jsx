@@ -1,6 +1,5 @@
 import AppStoreIcon from "../icon/app-store";
 import GooglePlayIcon from "../icon/google-play";
-// import appImage from "../../../assets/images/app.png"
 import qr from "../../../assets/images/qr.png"
 import BannerIcon from "../icon/banner-icon";
 import BannerIconSm from "../icon/banner-icon-sm";
@@ -25,20 +24,7 @@ const Banner = () => {
             lg:pb-0
           "
         >
-          {/* Banner image */}
-            {/* <img 
-              src={appImage} 
-              alt="footer banner image"
-              className="
-                absolute w-[242px] h-[172px] object-cover top-0 
-                -mt-[48px] ml-[15px] z-20 min-w-[242px] min-h-[172px] 
-                custom-md:ml-[50px]
-                md:h-[210px] md:w-[350px] md:-mt-[70px] md:ml-0 
-                custom-semi-md:w-[400px]
-                lg:w-[432px] lg:h-[288px] lg:top-[70px]
-                lg:-translate-x-4
-              "
-            /> */}
+          {/* Banner image */}         
             <BannerIconSm />
             <BannerIconMd />
             <BannerIcon />

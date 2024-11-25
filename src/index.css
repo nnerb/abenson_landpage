@@ -53,9 +53,16 @@
 
 @font-face {
   font-family: 'WorkSans-SemiBold'; 
-  src: local("WorkSans-Semi"), 
+  src: local("WorkSans-SemiBold"), 
   url('../src/assets/fonts/Work_Sans/WorkSans-SemiBold.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'WorkSans-Regular'; 
+  src: local("WorkSans-Regular"), 
+  url('../src/assets/fonts/Work_Sans/WorkSans-Regular.ttf') format('truetype');
+}
+
 
 .swiper-slide {
   flex: 0 0 auto; /* Prevent shrinking */

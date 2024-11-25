@@ -27,6 +27,7 @@ export default {
         'poppins-semibold': ['Poppins-SemiBold'],
         'poppins-bold': ['Poppins-Bold'],
         'roboto-bold': ['Roboto-Bold'],
+        'work-sans-regular': ['WorkSans-Regular'],
         'work-sans-semibold' : ['WorkSans-Semibold']
       },
       borderRadius: {

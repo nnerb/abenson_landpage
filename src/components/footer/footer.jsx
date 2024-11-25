@@ -1,26 +1,20 @@
+import { useState } from "react";
 import Banner from "./components/banner";
 import Socials from "./components/socials";
 import Subscribe from "./components/subscribe";
 import CallIcon from "./icon/call-icon";
 import ChevronDownIcon from "./icon/chevron-down-icon";
 import TrailingIcon from "./icon/trailing-icon";
+import { useRef } from "react";
 
-const personalShopperDetails = [
-  { 
-    title: 'Online Personal Shopper',
-    items: [
-      '(02) 8811-8811',
-      '(02) 8811-8811',
-    ],
-    hasIcon: false,
-    icon: false
-  },
-  { 
-    title: 'In-Store Personal Shopper',
-    items: [''],
-    hasIcon: true,
-    icon: <TrailingIcon/>
-  },
+const onlinePersonalShopper = [
+  { number: '(02) 8811-8811' },
+  { number: '(02) 8811-8811' },
+  // { number: '(02) 8811-8811' },
+  // { number: '(02) 8811-8811' },
+]
+
+const contactDetails = [
   { 
     title: 'Overseas Hotlines',
     items: [
@@ -29,8 +23,6 @@ const personalShopperDetails = [
       '(02) 8248-3233',
       '09989587101',
     ],
-    hasIcon: true,
-    icon: 'chevron'
   },
   { 
     title: 'Business Solutions',
@@ -38,8 +30,6 @@ const personalShopperDetails = [
       '(02) 8248-3233',
       '09989587101',
     ],
-    hasIcon: true,
-    icon: 'chevron'
   },
   { 
     title: 'Online Personal Shopper',
@@ -49,17 +39,21 @@ const personalShopperDetails = [
       'customerservice@abenson.com',
       'Customer Inquiry Form'
     ],
-    hasIcon: true,
-    icon: 'chevron'
   },
 ]
 
 
 const Footer = () => {
+  const [expandedIndex, setExpandedIndex] = useState(false);
+
+  const toggleSection = (index) => {
+    setExpandedIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <footer
       className="
-        relative h-[831.8px] bg-no-repeat bg-footer-image flex flex-col gap-6
+        relative h-[full] :::h-[831.8px] bg-no-repeat bg-footer-image flex flex-col gap-6
         bg-sm-position bg-sm-bg-size
         md:bg-md-position md:bg-md-bg-size
         lg:h-[569px] lg:py-[58px] lg:px-[64.02px]
@@ -86,12 +80,9 @@ const Footer = () => {
           <li className="py-4 px-2 flex flex-col gap-4 border-t-[1px]">
             <div className="flex w-full items-center">
               <h1 className="text-xs leading-[18px]">Online Personal Shopper</h1>
-              <div className="ml-auto">
-                <TrailingIcon />
-              </div>
             </div>
             <ul className="flex flex-col gap-2">
-              {personalShopperDetails.map((detail, index) => (
+              {onlinePersonalShopper.map((detail, index) => (
                 <li className="flex items-center gap-3" key={index}>
                     <CallIcon />
                   <p className="text-xs leading-[18px]">{detail.number}</p>
@@ -109,30 +100,41 @@ const Footer = () => {
               </div>
             </div>
           </li>
-          <li className="py-4 px-2 flex flex-col gap-4 border-t-[1px]">
-            <div className="flex w-full items-center">
-              <h1 className="text-xs leading-[18px]">Overseas Hotlines</h1>
-              <div className="ml-auto">
-                <ChevronDownIcon />
-              </div>
-            </div>
-          </li>
-          <li className="py-4 px-2 flex flex-col gap-4 border-t-[1px]">
-            <div className="flex w-full items-center">
-              <h1 className="text-xs leading-[18px]">Business Solutions</h1>
-              <div className="ml-auto">
-                <ChevronDownIcon />
-              </div>
-            </div>
-          </li>
-          <li className="py-4 px-2 flex flex-col gap-4 border-t-[1px]">
-            <div className="flex w-full items-center">
-              <h1 className="text-xs leading-[18px]">Customer Care</h1>
-              <div className="ml-auto">
-                <ChevronDownIcon />
-              </div>
-            </div>
-          </li>
+          {/* Add the functionality here */}
+          {contactDetails.map((detail, index) => (
+            <li
+              className={`py-4 px-2 flex flex-col border-t-[1px]
+              `}
+              key={index}
+            >
+              <div 
+                className="flex w-full items-center cursor-pointer"
+                style={{}}
+                onClick={() => toggleSection(index)}
+              >
+                <h1 className="text-xs leading-[18px] ">{detail.title}</h1>
+                <div 
+                  className={`ml-auto transition-transform duration-300 ${
+                    expandedIndex === index ? "rotate-180" : ""
+                  }`}
+                >
+                  <ChevronDownIcon />
+                </div>
+              </div>     
+              <ul
+                className={`flex flex-col gap-2 overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+                  expandedIndex === index ? "max-h-[500px]" : "max-h-0"
+                }`}
+              >
+                {detail.items.map((item, itemIndex) => (
+                  <li className="flex items-center gap-3" key={itemIndex}>
+                    <CallIcon />
+                    <p className="text-xs leading-[18px]">{item}</p>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       </div>
       {/* Overlay */}

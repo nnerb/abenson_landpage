@@ -1,5 +1,6 @@
 import Banner from "./components/banner";
 import Contacts from "./components/contacts";
+import PaymentImagesGrid from "./components/payment-images-grid";
 import Socials from "./components/socials";
 import Subscribe from "./components/subscribe";
 import SupportPayment from "./components/support-payment";
@@ -44,6 +45,9 @@ const Footer = () => {
           <Socials />
         </div>
         <Contacts />
+        <div>
+          <PaymentImagesGrid />
+        </div>
       </div>
       {/* Overlay */}
       <div className="absolute inset-0 bg-primary-blue opacity-[93%] z-0" />

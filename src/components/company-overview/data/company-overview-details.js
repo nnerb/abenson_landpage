@@ -1,6 +1,6 @@
-import mission from "../../../assets/images/mission.jpg"
-import vision from "../../../assets/images/vision.jpg"
-import coreValues from "../../../assets/images/core.jpg"
+import mission from "../../../assets/images/mission.png"
+import vision from "../../../assets/images/vision.png"
+import coreValues from "../../../assets/images/core.png"
 
 export const details = [ 
   { 

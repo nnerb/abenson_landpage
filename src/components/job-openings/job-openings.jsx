@@ -104,7 +104,7 @@ const JobOpenings = () => {
             onClick={toggleShowAll}
             className="bg-white py-[8.5px] max-w-[131px] rounded-full w-full 
             text-primary-b-blue font-poppins-medium custom-md:font-poppins-semibold text-[13px] 
-            leading-[14.82px] outline-none ring-1 ring-primary-b-blue
+            leading-[14.82px] outline-none ring-1 ring-primary-b-blue ring-inset
             custom-md:py-[10.5px] custom-md:text-[15px] custom-md:max-w-[275px] 
             custom-md:leading-[22.5px] custom-md:tracking-[-0.3px]"
           >

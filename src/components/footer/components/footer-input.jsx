@@ -7,7 +7,7 @@ const FooterInput = () => {
         className={`
         text-primary-gray
           text-[14px] px-[16px] py-[11.5px] rounded-full text-xs 
-          leading-[21px] outline-none appearance-none ring-1
+          leading-[21px] outline-none appearance-none ring-1 ring-inset
           w-full pr-36 peer ring-primary-bg-gray-hover focus:ring-primary-button
         `}
       />

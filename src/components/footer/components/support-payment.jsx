@@ -29,8 +29,8 @@ const SupportPayment = () => {
         xl:w-[378px]
       "
     >
-      <div className="flex xl:gap-[75px] gap-6  items-start flex-1 lg:justify-center xl:justify-between w-full">
-        <div className="flex gap-[75px] lg:flex-col lg:max-w-[123px] lg:gap-[50px] lg:min-w-[123px]">
+      <div className="flex xl:gap-[75px] gap-6 items-start flex-1 lg:justify-center xl:justify-between w-full">
+        <div className="flex gap-[75px] lg:flex-col lg:min-w-[123px] lg:max-w-[160px] lg:gap-[50px]">
           {supportPaymentDetails.slice(0,2).map((detail, index) => (
             <div 
               key={index} 

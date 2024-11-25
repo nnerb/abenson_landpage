@@ -37,7 +37,7 @@ const OnlinePersonalShopperSection = ({ onlinePersonalShopper }) => {
           </div>
         </div>
       </div>
-      <ul className="flex flex-col gap-2 md:ml-[48px] ">
+      <ul className="flex flex-col gap-2 md:ml-[48px] lg:ml-0">
         {onlinePersonalShopper.slice(0, 2).map((detail, index) => (
           <li className="flex items-center gap-3" key={index}>
             <CallIcon />

@@ -1,6 +1,6 @@
-import fb from "../assets/images/follow-us/fb.png"
-import jobstreet from "../assets/images/follow-us/jobstreet.png"
-import linkedin from "../assets/images/follow-us/linkedin.png"
+import fb from "../../../assets/images/follow-us/fb.png"
+import jobstreet from "../../../assets/images/follow-us/jobstreet.png"
+import linkedin from "../../../assets/images/follow-us/linkedin.png"
 
 export const followUsDetails = [
   { 

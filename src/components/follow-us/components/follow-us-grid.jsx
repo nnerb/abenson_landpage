@@ -1,4 +1,5 @@
-import { followUsDetails } from "../../../data/follow-us-data";
+import { followUsDetails } from "../data/follow-us-data";
+
 
 const FollowUsGrid = () => {
   return ( 

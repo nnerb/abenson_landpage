@@ -10,7 +10,7 @@ const Footer = () => {
     <footer
       className="
         relative h-[full] :::h-[831.8px] bg-no-repeat bg-footer-image flex flex-col gap-6
-        bg-sm-position bg-sm-bg-size
+        bg-sm-position bg-sm-bg-size md:gap-5
         md:bg-md-position md:bg-md-bg-size
         lg:h-[569px] lg:py-[58px] lg:px-[64.02px]
       "
@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="relative z-10 px-4 md:hidden">
         <Socials />
       </div>
-      <div className="px-[15px] text-white relative z-10">
+      <div className="px-[15px] text-white relative z-10 md:px-[38px]">
         <Contacts />
       </div>
       {/* Overlay */}

@@ -33,9 +33,12 @@ const Navbar = () => {
       {/* Search bar  */}
       <div className="pt-2 pb-[10px] lg:py-[15px] relative flex-1">
         <input 
-          className="rounded-[25px] bg-[#4B4EBB] text-sm
-          py-[8.5px] px-[11px] pr-10 w-full placeholder-white
-          focus:outline-none text-white focus:text-gray-500 focus:bg-white focus:placeholder-gray-600"
+          className="
+            rounded-[25px] bg-[#4B4EBB] text-sm
+            py-[8.5px] px-[11px] pr-10 w-full placeholder-white
+            focus:outline-none text-white focus:text-gray-500 
+            focus:bg-white focus:placeholder-gray-600
+          "
           placeholder="Summer Promo!"
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}  
@@ -49,7 +52,7 @@ const Navbar = () => {
         {/* User Account */}
         <nav 
           className="hidden lg:flex gap-2 font-poppins-semibold 
-          hover:bg-primary-blue-hover rounded-2xl p-2 -m-2"
+          hover:bg-primary-blue-hover rounded-2xl p-2 -m-2 duration-300"
         >
           <UserIcon aria-hidden="true" />
           <a href="/">
@@ -58,8 +61,12 @@ const Navbar = () => {
         </nav>
 
         {/* Cart */}
-        <button className="p-[6px] pr-[10px] mt-[5px] cursor-pointer" aria-label="Open cart">
-          <div className="hover:bg-primary-blue-hover rounded-2xl px-2 -mx-2 pt-2 -mt-2 flex items-center">
+        <button className="p-[6px] pr-[10px] mt-[5px] " aria-label="Open cart">
+          <div className="
+            hover:bg-primary-blue-hover transition duration-300 
+              rounded-2xl px-2 -mx-2 pt-2 -mt-2 flex items-center
+            "
+          >
             <div className="relative">
               <div className="lg:hidden">
                 <CartIcon />

@@ -17,8 +17,8 @@ const FooterInput = () => {
         className={`
           absolute top-0 right-0 text-[15px] font-poppins-semibold 
           cursor-pointer h-[44px] w-[131.5px] grid place-items-center text-center 
-          leading-[17.1px] rounded-full bg-primary-yellow
-          ring-primary-button text-primary-button
+          leading-[17.1px] rounded-full bg-primary-yellow transition-all
+          ring-primary-button text-primary-button hover:bg-yellow-300/80 duration-300
         `}
       >
         Subscribe

@@ -24,7 +24,7 @@ const SuccessToast = ({ t }) => {
     exit={{ opacity: 0, y: 20 }}
   >
     <img src={success} alt="Success" className="w-[20px] h-[20px]" />
-    <p className="flex-1">Form Submitted Successfully!</p>
+    <p className="flex-1">Resume Submitted Successfully!</p>
     <img
       src={close}
       alt="Close"

@@ -83,4 +83,4 @@ To learn more about the tools and libraries used in this project, check out the 
 - [React Hot Toast Documentation](https://react-hot-toast.com/) - Learn how to add toast notifications with React Hot Toast.
 - [React Scroll NPM](https://www.npmjs.com/package/react-scroll) - Learn how to add react scroll to have a smooth scrolling within your component.
 
-Happy coding!
+Happy coding!🎉🎉🎉

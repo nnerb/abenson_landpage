@@ -54,7 +54,6 @@ const FileInput = ({ label, register, error, fileName, placeholder }) => (
   </div>
 );
 
-// For type-checking
 FileInput.propTypes = {
   label: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,

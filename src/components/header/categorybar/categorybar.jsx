@@ -20,7 +20,6 @@ const CategoryBar = () => {
 
   const isScrolled = useScroll()
 
-   // Framer Motion Variants
    const itemVariants = {
     hidden: { y: -50, opacity: 0 }, 
     visible: (index) => ({

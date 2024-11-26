@@ -21,7 +21,6 @@ const FooterInfo = ({ details }) => {
   );
 };
 
-// Define PropTypes
 FooterInfo.propTypes = {
   details: PropTypes.arrayOf(
     PropTypes.shape({

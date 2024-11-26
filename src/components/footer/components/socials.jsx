@@ -5,7 +5,7 @@ const Socials = () => {
       {socialsData.map((social, index) => (
         <li key={index} className="flex-1">
           <a href={social.url} target="_blank">
-            {social.icon}
+            {<social.icon/>}
           </a>         
         </li>
       ))}

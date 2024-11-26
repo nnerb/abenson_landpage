@@ -15,6 +15,8 @@ export default {
         'primary-bg-gray-hover': '#DADCE0',
         'secondary-gray': '#767676',
         'primary-button': '#185BAA',
+        'primary-button-hover': '#2F73C2',
+        'secondary-button-hover': '#D9E5F2',
         'primary-text': '#FCFCFD',
         'primary-b-blue': '#185BAA',
         'secondary-blue': '#E5F6FF',

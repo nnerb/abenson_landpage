@@ -83,7 +83,9 @@ const JobOpenings = () => {
         >
           {/* Individual Job Cards */}
           {jobOpeningsData.slice(0, itemsToShow).map((job, index) => (
-            <article 
+            <a 
+              href="https://recruitment.dataon.com/abensongroup/#"
+              target="_blank"
               key={index} 
               className="bg-white flex flex-col rounded-lg 
               lg:rounded-primary p-3 min-w-[232px] lg:p-5 shadow-combined cursor-pointer"
@@ -100,7 +102,7 @@ const JobOpenings = () => {
               <p className="text-[9.29px] leading-[13.94px] font-normal lg:text-base lg:leading-6">
                 {job.setup}
               </p>
-            </article>
+            </a>
           ))}
         </motion.div>
 

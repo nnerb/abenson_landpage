@@ -1,26 +1,8 @@
+import { supportPaymentDetails } from "../data/support-payment-details";
 import PaymentImagesGrid from "./payment-images-grid";
 
 
 const SupportPayment = () => {
-
-  const supportPaymentDetails = [
-    {
-      title: 'Discover',
-      description: 'Why Abenson Awesomeness Blog Buyer’s Guide'
-    },
-    {
-      title: 'Our Services',
-      description: 'Click and Collect Business Solutions Appliance Padala New Home Solutions Easy Ink'
-    },
-    {
-      title: 'Support',
-      description: 'Store Locator Order Tracker Safety Advisory'
-    },
-    {
-      title: 'Payment methods',
-      description: false,
-    },
-  ]
 
   return ( 
     <div
@@ -49,21 +31,30 @@ const SupportPayment = () => {
               >
                 {detail.title}
               </h1>
-              <p 
-                className="
-                  text-white text-center 
-                  lg:text-start
-                  lg:text-xs lg:leading-[18px]
-                "
-              >
-                {detail.description}</p>
+              <div className="flex flex-col gap-1">
+                {detail.descriptions.map((item, index) => (
+                  <a 
+                    key={index}
+                    className="
+                      text-white text-center 
+                      lg:text-start
+                      lg:text-xs lg:leading-[18px]
+                      hover:underline
+                    "
+                    href={item.url}
+                    target="_blank"
+                  >
+                  {item.description}
+                </a>
+                ))}
+              </div>
+              
             </div>
           ))}
         </div>
         <div className="flex gap-[75px] lg:flex-col lg:gap-[52px]">
           {supportPaymentDetails.slice(2).map((detail, index) => {
             const isLastElement = index === supportPaymentDetails.slice(2).length - 1;
-
             return (
               <div 
                 key={index} 
@@ -88,17 +79,24 @@ const SupportPayment = () => {
                   {detail.title}
                 </h1>
 
-                {detail.description 
-                  ? <p 
-                      className="
-                        text-white text-center 
-                        lg:text-start
-                        lg:text-xs lg:leading-[18px]
-                        lg:max-w-[92px]
-                      "
-                    > 
-                      {detail.description}
-                    </p> 
+                {detail.descriptions 
+                  ? <div className="flex flex-col gap-1">
+                      {detail.descriptions.map((item, index) => (
+                        <a 
+                          key={index}
+                          className="
+                            text-white text-center 
+                            lg:text-start
+                            lg:text-xs lg:leading-[18px]
+                            hover:underline
+                          "
+                          href={item.url}
+                          target="_blank"
+                        >
+                        {item.description}
+                      </a>
+                      ))}
+                    </div>
                   : <PaymentImagesGrid />
                 }
               </div>

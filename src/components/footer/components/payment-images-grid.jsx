@@ -11,12 +11,14 @@ const PaymentImagesGrid = () => {
   ]
 
   return ( 
-    <div 
+    <a 
       className="
         grid grid-cols-2 grid-rows-3 h-[92px] 
         max-w-[274px] md:max-w-[133px] mx-auto
         place-items-center items-center
       "
+      href="https://www.abenson.com/promos/payment-offers"
+      target="_blank"
     >
     {paymentMethodsImages.map((image, index) => (
       <img key={index} 
@@ -27,7 +29,7 @@ const PaymentImagesGrid = () => {
         }`} /* Last item spans two columns */
       />
     ))}
-  </div>
+  </a>
    );
 }
  

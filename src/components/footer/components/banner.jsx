@@ -52,8 +52,19 @@ const Banner = () => {
               For easier shopping download our app!
             </h1>
             <div className="inline-flex gap-[6.33px]">
-              <GooglePlayIcon/>
-              <AppStoreIcon />
+              <a 
+                href="https://play.google.com/store/apps/details?id=com.abensonmembership.cloone&hl=en" 
+                target="_blank"
+              >
+                <GooglePlayIcon/>
+              </a>
+              <a 
+                href="https://apps.apple.com/ph/app/abenson/id1628455829" 
+                target="_blank"
+              > 
+                <AppStoreIcon />
+              </a>
+              
             </div>
             <img src={qr} className="h-[62px] w-[62px] hidden lg:block"/>
           </div>

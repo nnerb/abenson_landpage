@@ -45,6 +45,7 @@ const Form = () => {
     <section 
       className="overflow-hidden text-primary-gray px-[1px]
       custom-sm:px-0 w-full mx-auto min-w-[300px] custom-sm:max-w-[362px]"
+      id="resume"
     >
       <div className="py-4 custom-sm:px-4 flex flex-col items-center gap-[30px] w-full">
         <div className="w-full flex flex-col items-center gap-2 custom-sm:gap-3 max-w-[280px] px-6">

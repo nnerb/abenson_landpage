@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import ChevronRightIcon from "./icons/chevron-right-icon";
 import TagIcon from "./icons/tag-icon";
 import { categoryBarItems } from "./data/category-bar-items";
 import { motion } from "framer-motion"
+import useScroll from "../../../hooks/useScroll";
 
 const CategoryBar = () => {
 
@@ -17,23 +18,7 @@ const CategoryBar = () => {
     }
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 2) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const isScrolled = useScroll()
 
    // Framer Motion Variants
    const itemVariants = {
@@ -50,7 +35,7 @@ const CategoryBar = () => {
 
   return ( 
     <nav 
-      className={`${isScrolled ? "flex" : "lg:flex hidden"} items-center w-full mt-[67px] lg:mt-[79px] mb-[13px] px-3
+      className={`${isScrolled ? "flex" : "lg:flex hidden"} flex items-center w-full mt-[67px] lg:mt-[79px] mb-[13px] px-3
       md:px-[30px] lg:px-[100px] xl:px-[148px] bg-white`}
     >
       <ul 

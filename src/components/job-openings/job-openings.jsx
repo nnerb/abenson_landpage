@@ -54,6 +54,7 @@ const JobOpenings = () => {
     <section 
       className="relative w-full bg-secondary-blue 
       text-primary-gray z-10 overflow-hidden rounded-[10px] min-w-[328px]"
+      id="openings"
     >
       <MobileVector />
       {currentWidth >= 360 ? <DesktopVector/> : <MobileVector/>}
@@ -82,7 +83,7 @@ const JobOpenings = () => {
         >
           {/* Individual Job Cards */}
           {jobOpeningsData.slice(0, itemsToShow).map((job, index) => (
-            <div 
+            <article 
               key={index} 
               className="bg-white flex flex-col rounded-lg 
               lg:rounded-primary p-3 min-w-[232px] lg:p-5 shadow-combined cursor-pointer"
@@ -99,7 +100,7 @@ const JobOpenings = () => {
               <p className="text-[9.29px] leading-[13.94px] font-normal lg:text-base lg:leading-6">
                 {job.setup}
               </p>
-            </div>
+            </article>
           ))}
         </motion.div>
 

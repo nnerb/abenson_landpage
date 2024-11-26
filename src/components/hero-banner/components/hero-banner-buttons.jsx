@@ -1,9 +1,30 @@
 import PrimaryButton from "../../buttons/primary-button";
 import SecondaryButton from "../../buttons/secondary-button";
+import { motion } from "framer-motion"
 
 const HerroBannerButtons = () => {
+
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 50 }, // Start below and invisible
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { 
+        duration: 2, 
+        delay: 1, 
+        type: "spring"
+      } 
+    },
+  };
+
   return ( 
-    <div className="flex items-center justify-center gap-[6px] md:gap-3 lg:gap-4 w-full mt-4">
+    <motion.div 
+      variants={buttonVariants}
+      className="flex items-center justify-center gap-[6px] md:gap-3 lg:gap-4 w-full mt-4"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }} 
+    >
       <SecondaryButton
         className="
           max-w-[230px] text-[13px] leading-[14.82px] 
@@ -25,7 +46,7 @@ const HerroBannerButtons = () => {
         <span>Submit</span> 
         <span className="hidden md:block">Resume</span>
       </PrimaryButton>
-    </div>
+    </motion.div>
    );
 }
  

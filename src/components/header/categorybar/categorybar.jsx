@@ -51,7 +51,7 @@ const CategoryBar = () => {
             variants={itemVariants}
             initial="hidden"
             animate="visible"
-            custom={index} // Pass index for staggered animation
+            custom={index}
           > 
             {item.hasIcon && <TagIcon />}
             <span className="">{item.name}</span>

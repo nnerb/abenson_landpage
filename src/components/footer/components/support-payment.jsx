@@ -12,6 +12,7 @@ const SupportPayment = () => {
       "
     >
       <div className="flex xl:gap-[75px] gap-6 items-start flex-1 lg:justify-center xl:justify-between w-full">
+        {/* First Col */}
         <div className="flex gap-[75px] lg:flex-col lg:min-w-[123px] lg:max-w-[160px] lg:gap-[50px]">
           {supportPaymentDetails.slice(0,2).map((detail, index) => (
             <div 
@@ -52,6 +53,7 @@ const SupportPayment = () => {
             </div>
           ))}
         </div>
+        {/* Second Col */}
         <div className="flex gap-[75px] lg:flex-col lg:gap-[52px]">
           {supportPaymentDetails.slice(2).map((detail, index) => {
             const isLastElement = index === supportPaymentDetails.slice(2).length - 1;
@@ -78,7 +80,6 @@ const SupportPayment = () => {
                 >
                   {detail.title}
                 </h1>
-
                 {detail.descriptions 
                   ? <div className="flex flex-col gap-1">
                       {detail.descriptions.map((item, index) => (

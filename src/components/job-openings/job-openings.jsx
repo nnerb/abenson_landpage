@@ -2,25 +2,16 @@ import { useState, useEffect } from "react";
 import DesktopVector from "./svg/desktop-vector";
 import MobileVector from "./svg/mobile-vector";
 import SecondaryButton from "../buttons/secondary-button";
+// Data
+import { jobOpeningsData } from "./data/job-openings-data";
+import { motion } from "framer-motion"
 
 const JobOpenings = () => {
-  const jobOpeningsData = [
-    { title: 'CORPORATE SALES SPECIALIST', location: 'Quezon City', setup: 'Onsite' },
-    { title: 'IT PROJECT/SYSTEMS MANAGER', location: 'Quezon City', setup: 'Hybrid' },
-    { title: 'STORE SUPERVISOR', location: 'Bacolod', setup: 'Onsite' },
-    { title: 'STORE SUPERVISOR', location: 'Cebu', setup: 'Onsite' },
-    { title: 'STORE SUPERVISOR', location: 'Iloilo', setup: 'Onsite' },
-    { title: 'STORE SUPERVISOR', location: 'Laguna', setup: 'Onsite' },
-    { title: 'JUNIOR FRONT-END WEB DEVELOPER', location: 'Quezon City', setup: 'Hybrid' },
-  ];
-
+  
   const [showAll, setShowAll] = useState(false)
   const [visibleItems, setVisibleItems] = useState(3)
   const [currentWidth, setCurrentWidth] = useState(window.innerWidth)
 
-  
-
-  // Update the visible items count when the screen is resized
   useEffect(() => {
     const handleResize = () => {
       setCurrentWidth(window.innerWidth)
@@ -47,9 +38,17 @@ const JobOpenings = () => {
     };
   }, [currentWidth]);
 
-
   const toggleShowAll = () => setShowAll(prev => !prev);
   const itemsToShow = showAll ? jobOpeningsData.length : visibleItems;
+
+  const containerVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 2, type: "spring" },
+    },
+  };
 
   return (
     <section 
@@ -60,21 +59,26 @@ const JobOpenings = () => {
       {currentWidth >= 360 ? <DesktopVector/> : <MobileVector/>}
       <div 
         className="py-6 px-4 lg:px-[30px] lg:py-[50px] rounded-secondary 
-         lg:gap-10 flex flex-col !z-100 items-center justify-center w-full gap-6 z-20"
+        lg:gap-10 flex flex-col !z-100 items-center justify-center w-full gap-6 z-20"
+        
       >
         <h1 className="text-lg font-poppins-semibold custom-md:text-[28px] md:leading-[36px]">
           Featured Job Openings
         </h1>
 
         {/* Grid with responsive columns */}
-        <div 
+        <motion.div 
           className={`grid gap-3 lg:gap-5 max-w-[1240px] w-full
             grid-rows-${jobOpeningsData.length} custom-md:grid-rows-2
             grid-cols-1 custom-md:grid-cols-2 lg:grid-cols-3
-            lg:rounded-primary px-8 lg:px-0 duration-300 transition-all
+            lg:rounded-primary px-8 lg:px-0
             ${visibleItems >= 3 && showAll ? "h-auto" : `h-[182px] overflow-hidden 
             custom-md:overflow-visible custom-md:h-auto`}
           `}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
         >
           {/* Individual Job Cards */}
           {jobOpeningsData.slice(0, itemsToShow).map((job, index) => (
@@ -97,7 +101,7 @@ const JobOpenings = () => {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Show See More/See Less button only if there are more items to show */}
         {jobOpeningsData.length > visibleItems && (

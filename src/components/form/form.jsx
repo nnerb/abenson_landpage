@@ -6,6 +6,7 @@ import { schema } from "./schema/form-schema";
 import PrimaryButton from "../buttons/primary-button";
 import toast from "react-hot-toast";
 import SuccessToast from "../toast/success-toast";
+import { motion } from "framer-motion"
 
 const Form = () => {
   const {
@@ -33,6 +34,13 @@ const Form = () => {
   
   const fileName = resumeFile?.[0]?.name || "";
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: -100 },
+    visible: { opacity: 1, y: 0 },
+  }
+
+
+
   return (
     <section 
       className="overflow-hidden text-primary-gray px-[1px]
@@ -52,10 +60,15 @@ const Form = () => {
         </div>
         
         {/* Form Starts Here */}
-        <form 
+        <motion.form 
           className="w-full flex flex-col gap-4" 
           onSubmit={handleSubmit(onSubmit)} 
           autoComplete="off"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 2, type: "spring" }}
         >
           <fieldset className="w-full flex flex-col gap-4">
             <legend className="sr-only">Personal Information</legend>
@@ -106,7 +119,7 @@ const Form = () => {
           >
             Submit
           </PrimaryButton>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

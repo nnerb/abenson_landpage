@@ -1,6 +1,17 @@
 import FollowUsGrid from "./components/follow-us-grid";
+import { motion } from "framer-motion"
 
-
+const containerVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { 
+    opacity: 1, 
+    scale: 1,
+    transition: {
+      duration: 2,
+      type:"spring"
+    } 
+  }
+}
 const FollowUs = () => {
   return ( 
     <section 
@@ -11,9 +22,15 @@ const FollowUs = () => {
         font-poppins-semibold vertical-trim custom-sm:no-vertical-trim">
         Follow Us
       </h1>
-      <ul className="flex items-start gap-[24.44px] md:gap-10 md:items-center">
+      <motion.ul 
+        className="flex items-start gap-[24.44px] md:gap-10 md:items-center"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
        <FollowUsGrid />
-      </ul>
+      </motion.ul>
     </section>
    );
 }

@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import InputField from "./components/input-field";
 import FileInput from "./components/file-input";
 import { schema } from "./schema/form-schema";
+import PrimaryButton from "../buttons/primary-button";
 
 const Form = () => {
   const {
@@ -85,16 +86,19 @@ const Form = () => {
           </fieldset>
 
           {/* Submit Button */}
-          <button
+          <PrimaryButton
             type="submit"
-            className="bg-primary-button text-[13px] inline-flex 
-              items-center justify-center h-[42px] text-white py-[13.5px]
-              text-center rounded-full font-poppins-medium text-xs 
+            className="
+              text-[13px] py-[13.5px] leading-[14.82px]
+              text-center font-poppins-medium
+              custom-sm:font-poppins-semibold
               custom-sm:text-[15px] custom-sm:leading-[22.5px] 
-              custom-sm:tracking-[-0.3px] flex-shrink-0"
+              custom-sm:tracking-[-0.3px]
+              lg:py-[10.75px]
+            "
           >
             Submit
-          </button>
+          </PrimaryButton>
         </form>
       </div>
     </section>

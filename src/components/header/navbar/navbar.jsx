@@ -6,9 +6,26 @@ import UserIcon from "./icons/user-icon";
 import ColoredCartIcon from "./icons/colored-cart-icon";
 import { phpFormatter } from "../../../utils/formatter";
 import ChevronLeftIcon from "./icons/chevron-left-icon";
+import { motion } from "framer-motion"
 
 const Navbar = () => {
   const [isFocused, setIsFocused] = useState(false)
+
+  const leftContentVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+
+  const searchBarVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
+  };
+
+  const rightContentVariants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  };
+
 
   return ( 
     <header 
@@ -17,21 +34,34 @@ const Navbar = () => {
        px-3 flex items-center gap-3 fixed 
        lg:gap-[25px] lg:px-[30px] text-white z-50`}
     >
-
-       {isFocused && <div className="md:hidden"><ChevronLeftIcon/></div>}
-      {/* Branding */}
-      <div className={`flex-shrink-0 ${isFocused && "md:block hidden"}`}>
-        <a href="/" aria-label="Homepage">
-          <img 
-            src={logo}
-            alt="Company Logo" 
-            className="h-[14px] w-[106px] lg:h-[22px] lg:w-[160px] lg:mb-[7px]" 
-          />
-        </a>
-      </div>
-
+      {/* coming from left */}
+      <motion.div
+        variants={leftContentVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 2.5, type: "spring" }}
+      >
+        {isFocused && <div className="md:hidden"><ChevronLeftIcon/></div>}
+        {/* Branding */}
+        <div className={`flex-shrink-0 ${isFocused && "md:block hidden"}`}>
+          <a href="/" aria-label="Homepage">
+            <img 
+              src={logo}
+              alt="Company Logo" 
+              className="h-[14px] w-[106px] lg:h-[22px] lg:w-[160px] lg:mb-[7px]" 
+            />
+          </a>
+        </div>
+      </motion.div>
       {/* Search bar  */}
-      <div className="pt-2 pb-[10px] lg:py-[15px] relative flex-1">
+      {/* just appear */}
+      <motion.div 
+        className="pt-2 pb-[10px] lg:py-[15px] relative flex-1"
+        variants={searchBarVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 2 }}
+      >
         <input 
           className="
             rounded-[25px] bg-[#4B4EBB] text-sm
@@ -46,9 +76,16 @@ const Navbar = () => {
         <div className="absolute right-0 top-0 translate-y-[1.1rem] -translate-x-4 lg:translate-y-6 ">
           {<SearchIcon isFocused={isFocused} />}
         </div>
-      </div>
+      </motion.div>
 
-      <div className="flex items-center gap-[15px]">
+        {/* Coming from right */}
+      <motion.div 
+        className="flex items-center gap-[15px]"
+        variants={rightContentVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 2.5, type: "spring" }}
+      >
         {/* User Account */}
         <nav 
           className="hidden lg:flex gap-2 font-poppins-semibold 
@@ -88,7 +125,7 @@ const Navbar = () => {
             </div>  
           </div>
         </button>
-      </div>
+      </motion.div>
     </header>
    );
 }

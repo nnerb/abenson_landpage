@@ -1,10 +1,15 @@
 import HerroBannerButtons from "./components/hero-banner-buttons";
 import HeroBannerHeader from "./components/hero-banner-header";
 import HeroBannerImage from "./components/hero-banner-image";
+import { motion } from "framer-motion"
 
 const HeroBanner = () => {
+
+
   return (
-    <section className="mt-6 lg:mt-[140px] z-0 w-full mx-auto max-w-[1300px] lg:px-[30px]">
+    <motion.section 
+      className="mt-6 lg:mt-[140px] z-0 w-full mx-auto max-w-[1300px] lg:px-[30px]"
+    >
       <div className="relative">
         {/* Gradient Overlay */}
         <div className="absolute inset-0 z-10">
@@ -26,7 +31,7 @@ const HeroBanner = () => {
           <HerroBannerButtons />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

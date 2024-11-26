@@ -16,7 +16,9 @@ function App() {
   return (
     <div className="w-full h-full overflow-hidden font-poppins-regular max-w-[1440px] mx-auto">
       <Toaster />
-      <div className="fixed top-0 right-0 left-0 w-full mx-auto max-w-[1300px] z-50 bg-white">
+      <div 
+        className="fixed top-0 right-0 left-0 w-full mx-auto max-w-[1300px] z-50 bg-white"
+      >
         <TopBar />
         <Navbar />
         <CategoryBar />

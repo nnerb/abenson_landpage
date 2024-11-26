@@ -17,63 +17,66 @@ const ContactDetailsSection = ({
 
   return (
     <>
-      {contactDetails.map((detail, index) => (
-        <li
-          className={`
-            py-4 px-2 flex flex-col border-t-[1px]
-            md:py-0 last:border-b-[1px]
-            ${expandedIndex === index ? "md:mb-4" : ""}
-          `}
-          key={index}
-        >
-          <div
-            className={`flex w-full items-center cursor-pointer ${
-              expandedIndex === index ? "mb-4 md:mb-0" : "mb-0"
-            }`}
-            onClick={() => toggleSection(index)}
+      {contactDetails.map((detail, index) => {
+        const lastItem = detail.items.length - 1;
+        return (
+          <li
+            className={`
+              py-4 px-2 flex flex-col border-t-[1px]
+              md:py-0 last:border-b-[1px]
+              ${expandedIndex === index ? "md:mb-4" : ""}
+            `}
+            key={index}
           >
-            <h1 
-              className="
-                text-xs leading-[18px]
-                md:text-[12.78px] md:leading-[44.8px]
-              "
-            >
-            {detail.title}
-            </h1>
             <div
-              className={`
-                ml-auto transition-transform duration-300 
-                ${
-                  expandedIndex === index ? "rotate-180" : ""
-                }
-              `}
+              className={`flex w-full items-center cursor-pointer ${
+                expandedIndex === index ? "mb-4 md:mb-0" : "mb-0"
+              }`}
+              onClick={() => toggleSection(index)}
             >
-              <ChevronDownIcon />
+              <h1 
+                className="
+                  text-xs leading-[18px]
+                  md:text-[12.78px] md:leading-[44.8px]
+                "
+              >
+              {detail.title}
+              </h1>
+              <div
+                className={`
+                  ml-auto transition-transform duration-300 
+                  ${
+                    expandedIndex === index ? "rotate-180" : ""
+                  }
+                `}
+              >
+                <ChevronDownIcon />
+              </div>
             </div>
-          </div>
-          <ul
-            className={`flex flex-col gap-2 overflow-hidden transition-all duration-300`}
-            style={{
-              maxHeight: expandedIndex === index ? "1000px" : "0px",
-            }}
-          >
-            {expandedIndex === index &&
-              detail.items.map((item, itemIndex) => (
-                <li className="flex items-center gap-3" key={itemIndex}>
-                <CallIcon/>
-                <p 
-                  className="
-                    text-xs leading-[18px] 
-                    md:text-[14px] md:leading-[16.42px]
-                  "
-                >
-                  {item}
-                </p>
-                </li>
-              ))}
-          </ul>
-        </li>
-      ))}
+            <ul
+              className={`flex flex-col gap-2 overflow-hidden transition-all duration-300`}
+              style={{
+                maxHeight: expandedIndex === index ? "1000px" : "0px",
+              }}
+            >
+              {expandedIndex === index &&
+                detail.items.map((item, itemIndex) => (
+                  <li className={`flex items-center gap-3  ${lastItem && "pb-4"}`} key={itemIndex}>
+                  <CallIcon/>
+                  <p 
+                    className="
+                      text-xs leading-[18px] 
+                      md:text-[14px] md:leading-[16.42px]
+                    "
+                  >
+                    {item}
+                  </p>
+                  </li>
+                ))}
+            </ul>
+          </li>
+        )
+      })}
     </>
   );
 };

@@ -1,16 +1,45 @@
 import { details } from "./data/company-overview-details";
+import { motion } from "framer-motion"
 
 const CompanyOverview = () => {
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: -100, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 2,
+        ease: "easeOut", 
+        type: "spring"
+      },
+    },
+  };
+
   return ( 
-    <section className="relative w-full flex items-center justify-center relatove overflow-hidden">
+    <motion.section
+      className="relative w-full flex items-center justify-center relatove overflow-hidden"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       <ul className="inline-flex gap-2 overflow-auto scrollbar-hide cursor-pointer md:cursor-default">
-      
-      {/* -translate-y-[px] -translate-x-4 */}
-      
         {details.map((detail, index) => (
-          <li
+          <motion.li
             key={detail.title}
-            className="relative h-auto w-[401px] min-h-[188px] min-w-[177px] p-30 "
+            className="relative h-auto w-[401px] min-h-[188px] min-w-[177px] p-30"
+            variants={itemVariants}
           >
             {/* The Lightning effect */}
             { 
@@ -50,10 +79,10 @@ const CompanyOverview = () => {
                 : detail.description.replace(/,/g, ',<br />')
               }}
             />
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </section>
+    </motion.section>
    );
 }
  

@@ -105,8 +105,3 @@
   line-height: normal;
 }
 
-/* FOOTER  */
-
-.accordion-wrapper {
-  transition: grid-template-rows 200ms;
-}

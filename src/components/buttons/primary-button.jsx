@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 
-const PrimaryButton = ({ className, onClick, children }) => {
+const PrimaryButton = ({ className, onClick, children, type }) => {
   return (
     <button
+      type={type}
       className={`
         ${className} 
         text-white bg-primary-button
@@ -17,6 +18,7 @@ const PrimaryButton = ({ className, onClick, children }) => {
 }
 
 PrimaryButton.propTypes = {
+  type: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.node

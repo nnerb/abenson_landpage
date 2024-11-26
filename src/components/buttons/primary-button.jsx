@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const PrimaryButton = ({ label, className, onClick, children }) => {
+const PrimaryButton = ({ className, onClick, children }) => {
   return (
     <button
       className={`
@@ -11,13 +11,12 @@ const PrimaryButton = ({ label, className, onClick, children }) => {
       `}
       onClick={onClick}
     >
-      {children || label}
+      {children}
     </button>
    );
 }
 
 PrimaryButton.propTypes = {
-  label: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
   children: PropTypes.node

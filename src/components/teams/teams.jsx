@@ -23,6 +23,7 @@ import shopSvg from "./svg/shop.svg"
 import smileSvg from "./svg/smile.svg"
 import systemSvg from "./svg/system.svg"
 import dataSvg from "./svg/data.svg"
+import SecondaryButton from "../buttons/secondary-button"
 
 
 const teamsData = [
@@ -137,18 +138,6 @@ const Teams = () => {
                   alt={team.name}
                   className="object-cover min-w-[161px] slider-md:min-h-[226.52px]"
                 /> 
-                {/* <div 
-                  style={{ background: team.iconColor }} 
-                  className="flex flex-col items-center justify-center gap-"
-                >
-                  <img src={team.icon}/>
-                  <p 
-                    className="font-poppins-bold text-[12.83px] leading-[19.24px] text-center text-white
-                    lgtext-2xl leading slider-semi-lg:text-lg lg:text-2xl"
-                  >
-                    {team.name}
-                  </p>
-                </div> */}
                 {/* Content */}
                 <div 
                   className=" absolute inset-0 h-full flex items-center justify-center 
@@ -167,14 +156,16 @@ const Teams = () => {
                     <p className="text-center text-xs slider-semi-lg:text-sm slider-lg:text-lg">
                       {team.description}
                     </p>
-                    <a 
-                      className="text-primary-b-blue text-[10px] text-center cursor-pointer
-                      font-poppins-semibold bg-white py-1 px-3 rounded-[28px] w-full 
-                      md:py-[6px] slider-semi-lg:px-4 lg:text-[15px] slider-lg:px-7"
-                      href="https://recruitment.dataon.com/abensongroup/#" target="_blank"
-                    >
+                  <SecondaryButton
+                    className="text-[10px] text-center py-1 px-3 w-full 
+                    md:py-[6px] slider-semi-lg:px-4 lg:text-[15px] 
+                    slider-lg:px-7"
+                  >
+                    <a href="https://recruitment.dataon.com/abensongroup/#" target="_blank">
                       Check for openings
                     </a>
+                  </SecondaryButton>
+                   
                   </div>
                 </div>
               </div>
@@ -182,12 +173,6 @@ const Teams = () => {
             </div>
           ))}
         </Swiper>
-        {/* <div className="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2 z-[60] bg-gray-800 text-white p-2 rounded-full">
-          &lt;
-        </div>
-        <div className="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2 z-[60] bg-gray-800 text-white p-2 rounded-full">
-          &gt;
-        </div>    */}
       </div>
     </section>
    );

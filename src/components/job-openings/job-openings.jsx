@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import DesktopVector from "./svg/desktop-vector";
 import MobileVector from "./svg/mobile-vector";
+import SecondaryButton from "../buttons/secondary-button";
 
 const JobOpenings = () => {
   const jobOpeningsData = [
@@ -100,16 +101,16 @@ const JobOpenings = () => {
 
         {/* Show See More/See Less button only if there are more items to show */}
         {jobOpeningsData.length > visibleItems && (
-          <button
+          <SecondaryButton
             onClick={toggleShowAll}
-            className="bg-white py-[8.5px] max-w-[131px] rounded-full w-full 
-            text-primary-b-blue font-poppins-medium custom-md:font-poppins-semibold text-[13px] 
-            leading-[14.82px] outline-none ring-1 ring-primary-b-blue ring-inset
+            className="py-[8.5px] max-w-[131px] w-full 
+          text-primary-b-blue font-poppins-medium custom-md:font-poppins-semibold 
+            text-[13px] leading-[14.82px] 
             custom-md:py-[10.5px] custom-md:text-[15px] custom-md:max-w-[275px] 
             custom-md:leading-[22.5px] custom-md:tracking-[-0.3px]"
           >
             {showAll ? 'See Less' : 'See All'}
-          </button>
+          </SecondaryButton>
         )}
       </div>
     </section>

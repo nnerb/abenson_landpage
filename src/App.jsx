@@ -10,10 +10,12 @@ import JobOpenings from "./components/job-openings/job-openings"
 import Form from "./components/form/form"
 import FollowUs from "./components/follow-us/follow-us"
 import Footer from "./components/footer/footer"
+import { Toaster } from "react-hot-toast"
 
 function App() {
   return (
     <div className="w-full h-full overflow-hidden font-poppins-regular max-w-[1440px] mx-auto">
+      <Toaster />
       <div className="fixed top-0 right-0 left-0 w-full mx-auto max-w-[1300px] z-50 bg-white">
         <TopBar />
         <Navbar />

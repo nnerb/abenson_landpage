@@ -4,6 +4,8 @@ import InputField from "./components/input-field";
 import FileInput from "./components/file-input";
 import { schema } from "./schema/form-schema";
 import PrimaryButton from "../buttons/primary-button";
+import toast from "react-hot-toast";
+import SuccessToast from "../toast/success-toast";
 
 const Form = () => {
   const {
@@ -11,6 +13,7 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
     control,
+    reset
   } = useForm({
     resolver: zodResolver(schema),
   });
@@ -22,8 +25,12 @@ const Form = () => {
 
   const onSubmit = (data) => {
     console.log("Form Submitted:", data);
+    toast.custom((t) => (
+     <SuccessToast t={t}/>
+    ));
+    reset();
   };
-
+  
   const fileName = resumeFile?.[0]?.name || "";
 
   return (

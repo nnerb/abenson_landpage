@@ -2,7 +2,9 @@ import { z } from "zod";
 
 export const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters long" }),
-  email: z.string().email({ message: "Invalid email" }),
+  email: z.string()
+  .min(3, { message: "Email is required" })
+  .email({ message: "Invalid email" }),
   resume: z
     .instanceof(FileList)
     .refine((files) => files.length > 0, { message: "Resume is required" })

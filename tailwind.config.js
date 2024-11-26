@@ -54,7 +54,15 @@ export default {
           0px 61.58px 24.4px 0px #00000003,
           0px 96.43px 26.72px 0px #00000000
         `,
-        'cart': '0px 0px 15px 0px #0000001A'
+        'cart': '0px 0px 15px 0px #0000001A',
+        'success': `
+          0px 0px 0px 0px #00000026,
+          0px 1px 7px 0px #00000026,
+          0px 2px 13px 0px #00000021,
+          0px 8px 18px 0px #00000014,
+          0px 25px 21px 0px #00000005,
+          0px 59px 23px 0px #00000000
+        `,
       },
       backgroundImage: {
         'custom-gradient': `

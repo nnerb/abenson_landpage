@@ -34,6 +34,10 @@ This project is a frontend assessment for Abenson, built with modern web technol
 - **Follow Us**: Links to the company’s social media or external resources.
 - **Footer**: Includes an accordion-style footer banner and a subscribe button.
 
+## Semantic HTML
+
+This project uses **semantic HTML** to improve accessibility, SEO, and code maintainability. By using meaningful HTML tags like `<header>`, `<footer>`, `<section>`, and others, the structure of the site is clear and easy to navigate both for developers and for search engines.
+
 ## Getting Started
 
 ### Prerequisites

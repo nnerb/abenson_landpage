@@ -1,4 +1,4 @@
-# Abenson Junior Front-End Developer Skill Test
+# Abenson's Junior Front-End Developer Skill Test
 
 This project is a Junior Front-End Developer Skill Test for Abenson, built with modern web technologies to ensure a seamless development experience and maintainable codebase.
 

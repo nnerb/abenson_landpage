@@ -2,6 +2,9 @@
 
 This project is a Junior Front-End Developer Skill Test for Abenson, built with modern web technologies to ensure a seamless development experience and maintainable codebase.
 
+## Live Demo
+You can view the live version of this project at [https://abenson-assessment.vercel.app/](https://abenson-assessment.vercel.app/).
+
 ## Tools and Libraries
 
 - **React**: A JavaScript library for building user interfaces.

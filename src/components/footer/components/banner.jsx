@@ -51,7 +51,7 @@ const Banner = () => {
             >
               For easier shopping download our app!
             </h1>
-            <div className="inline-flex gap-[6.33px]">
+            <div className="inline-flex gap-[6.33px] z-10">
               <a 
                 href="https://play.google.com/store/apps/details?id=com.abensonmembership.cloone&hl=en" 
                 target="_blank"

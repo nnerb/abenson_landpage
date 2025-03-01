@@ -1,6 +1,6 @@
-# Abenson's Junior Front-End Developer Skill Test
+# Abenson Website Landing Page
 
-This project is a Junior Front-End Developer Skill Test for Abenson, built with modern web technologies to ensure a seamless development experience and maintainable codebase.
+This project is a landing page for Abenson's website, designed using modern web technologies to provide a smooth user experience and maintainable codebase.
 
 ## Live Demo
 You can view the live version of this project at [https://abenson-assessment.vercel.app/](https://abenson-assessment.vercel.app/).
